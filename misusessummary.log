@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300) (preloaded format=pdflatex 2020.10.16)  22 DEC 2021 12:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300) (preloaded format=pdflatex 2020.10.16)  23 DEC 2021 06:48
 entering extended mode
-**/Users/krishna/repos/ecoopaec21/misusessummary.tex
-(/Users/krishna/repos/ecoopaec21/misusessummary.tex
+**/Users/krishna/repos/ecoopaec21_working/misusessummary.tex
+(/Users/krishna/repos/ecoopaec21_working/misusessummary.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-03-03> ("/Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/article.cls"
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
@@ -579,69 +579,32 @@ Overfull \hbox (28.46664pt too wide) in paragraph at lines 274--275
 [][] 
  []
 
-
-LaTeX Warning: Citation `DesInsecure' on page 3 undefined on input line 282.
-
 [3]
-
-LaTeX Warning: Citation `applied_crypto' on page 4 undefined on input line 314.
-
-
-LaTeX Warning: Citation `EBCinsecure' on page 4 undefined on input line 315.
-
-
-LaTeX Warning: Citation `cryptolint' on page 4 undefined on input line 321.
-
-
 Overfull \hbox (23.1567pt too wide) in paragraph at lines 353--360
 \OT1/cmtt/m/n/10 isInitialized \OT1/cmr/m/n/10 rep-re-sents whether the ci-pher has been ini-tial-ized. When \OT1/cmtt/m/n/10 engineInit
  []
 
-[4]
-
-LaTeX Warning: Citation `bleichenbacher1998chosen' on page 5 undefined on input line 426.
-
-[5]
+[4] [5]
 Overfull \hbox (25.51675pt too wide) in paragraph at lines 442--446
 \OT1/cmr/m/n/10 ond re-quire-ments for-bids us-ing PKCS v1 en-cod-ings. The \OT1/cmtt/m/n/10 verifyEngineParameters()
  []
-
-
-LaTeX Warning: Citation `PBE_Analyzed' on page 6 undefined on input line 453.
-
-
-LaTeX Warning: Citation `md5collisions' on page 6 undefined on input line 455.
-
-
-LaTeX Warning: Citation `UseRandomIV' on page 6 undefined on input line 477.
 
 
 Overfull \hbox (35.44385pt too wide) in paragraph at lines 480--482
 \OT1/cmr/m/n/10 re-quire that the ini-tial-iza-tion vec-tor was the re-sult of a call to \OT1/cmtt/m/n/10 SecureRandom.nextBytes\OT1/cmr/m/n/10 ,
  []
 
-[6] [7]
-
-LaTeX Warning: Reference `sec:NotDetectable' on page 8 undefined on input line 562.
-
-
-LaTeX Warning: Citation `keyexchange' on page 8 undefined on input line 569.
-
-[8] (misusessummary.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+[6] [7] [8] (misusessummary.aux) ) 
 Here is how much of TeX's memory you used:
- 28654 strings out of 481293
- 726146 string characters out of 2906857
- 1258477 words of memory out of 3000000
- 43719 multiletter control sequences out of 15000+200000
+ 28653 strings out of 481293
+ 726167 string characters out of 2906857
+ 1258476 words of memory out of 3000000
+ 43718 multiletter control sequences out of 15000+200000
  543022 words of font info for 67 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,7n,127p,763b,1634s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 74i,7n,127p,771b,1634s stack positions out of 5000i,500n,10000p,200000b,50000s
 </Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr17.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmr5.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy5.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt10.pfb></Library/Application Support/MiKTeX/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on misusessummary.pdf (8 pages, 161413 bytes).
+Output written on misusessummary.pdf (8 pages, 160905 bytes).
 PDF statistics:
  72 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

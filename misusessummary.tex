@@ -279,7 +279,7 @@ public verified class ResultSet {
 \subsection{Using DES}
 
 The Data Encryption Standard (DES) is a symmetric encryption algorithm.
-By modern standards, the algorithm is considered insecure and its usage is discouraged \cite{DesInsecure}.
+By modern standards, the algorithm is considered insecure and its usage is discouraged.
 
 This misuse can be detected with jGuard language extensions. In BouncyCastle, the \texttt{DESEngine} class
 is responsible for providing the DES algorithm.
@@ -311,14 +311,14 @@ in a test run.
 When requesting a symmetric encryption scheme without specifying further transformations,
 most implementations default to using the Electronic Code Book (ECB) mode.
 In this mode, messages are split into fixed-length blocks which are then encrypted or
-decrypted independently \cite{applied_crypto}.
-This mode is not generally considered secure \cite{EBCinsecure}, as the output of two blocks may
+decrypted independently .
+This mode is not generally considered secure, as the output of two blocks may
 be correlated to learn about the original message.
 
 Hence, it is considered a bad practice to use symmetric encryption algorithms with ECB.
 At the same time, this potentially-insecure mode is used a lot.
 In an automated analysis of \num{11748} Android applications, Egele \etal found that \num{7656}
-applications were using this encryption mode \cite{cryptolint}.
+applications were using this encryption mode .
 
 To detect these misuses, the \texttt{BaseBlockCipher} class from BouncyCastle has been converted
 to a verified class with the following additions.
@@ -423,7 +423,7 @@ A control flow analysis of this method does not reveal the problematic usage.
 \subsection{Insecure RSA configurations}
 
 Using the RSA encryption algorithm with a PKCS v1 encoding configuration can reveal
-information about the encrypted message and is considered insecure \cite{bleichenbacher1998chosen}.
+information about the encrypted message and is considered insecure.
 
 To detect insecure usages of this encoding, the \texttt{CipherSpi} class implementing
 asymmetric ciphers in BouncyCastle was converted to a verified class.
@@ -450,9 +450,9 @@ the guarded implementation and CogniCrypt.
 \subsection{Using PBE with MD5 and DES}
 
 Password-Based Encryption, or PBE, combines a password chosen by a user
-with salt into a secure cryptographic key \cite{PBE_Analyzed}.
+with salt into a secure cryptographic key.
 
-Using insecure encryption algorithms, or hashing algorithms with known collisions like MD5 \cite{md5collisions},
+Using insecure encryption algorithms, or hashing algorithms with known collisions like MD5,
 can lead to predictable and hence insecure keys.
 
 In BouncyCastle, the \texttt{PBE} class is responsible for constructing a PBE implementation.
@@ -474,7 +474,7 @@ Cipher Block Chaining Mode, or CBC, combines previous ciphertext blocks with the
 information about the source leaking out.
 When encrypting the first block, the message is combined with an Initialization Vector (IV) instead.
 If an IV is re-used and a message starting with the same block is encrypted multiple times, the first
-ciphertext block will also be the same, which is undesirable \cite{UseRandomIV}.
+ciphertext block will also be the same, which is undesirable.
 For this reason, encrypting with CBC mode should require a random initialization vector.
 
 To determine randomness, the guarded BouncyCastle implementation can require that the initialization vector
@@ -559,14 +559,14 @@ While jGuard is able to guard a library implementation to detect most misuses re
 not all misuses can be analyzed.
 
 In two instances, a misuse is related to a missing \texttt{try}/\texttt{catch} mechanism,
-which cannot be detected by jGuard as described in section \ref{sec:NotDetectable}.
+which cannot be detected by jGuard as described in the main paper.
 CogniCrypt did not detect the two misuses either.
 
 In two other cases, a key used for encryption was defined statically the code.
-As section \ref{sec:NonRandomIV} shows, it is possible to enforce that an encryption key
+As shown in our main paper, it is possible to enforce that an encryption key
 is random.
 However, there are valid uses for a non-random key. For instance, one might want to use a key obtained
-through an asynchronous key-exchange mechanism \cite{keyexchange}.
+through an asynchronous key-exchange mechanism.
 This high-level usage violation cannot be detected in the implementation of a library.
 CogniCrypt reported the two misuses, but also reported a lot of false-positives for
 this misuse kind in valid code.
