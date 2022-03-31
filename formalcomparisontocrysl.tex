@@ -1,0 +1,377 @@
+\documentclass{article}
+\title{Formal comparison of CrySL with jGuard}
+\author{Anonymous}
+
+\usepackage{tabularx}   % Tabellen, die sich automatisch der Breite anpassen
+\usepackage{mathtools} % erweiterte Fassung von amsmath
+\usepackage{amssymb}   % erweiterter Zeichensatz
+\usepackage[binary-units]{siunitx}   % Einheiten
+\usepackage{listings}
+\usepackage{import}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{fancyvrb}
+\usepackage{multirow}
+\usepackage[nounderscore]{syntax} % Definitionen von Grammatiken
+
+\usepackage{pgfplots}
+\usepackage{pgf-pie}
+\usepgfplotslibrary{statistics}
+
+\pgfplotsset{compat=1.17}
+
+\newcommand{\etal}{et al.\ }
+\newcommand{\eg}{e.g.}
+
+\newcommand{\syncDecl}[1]{<{\color{blue} \textbf{#1}}\label{gr:#1}>}
+\newcommand{\syncRef}[1]{\hyperref[gr:#1]{\synt{{\color{blue} \textbf{#1}}}}}
+\newcommand{\customSyncRef}[2]{\hyperref[gr:#1]{<\emph{\color{blue} \textbf{#2}}>}}
+\newcommand{\todo}[1]{{\color{red} \textbf{TODO: } #1}}
+
+\newcommand{\detectable}{\tikz[baseline=-0.5ex]\draw[green,fill=green,radius=3pt] (0,0) circle ;}%
+\newcommand{\partiallyDetectable}{\tikz[baseline=-0.5ex]\draw[orange,fill=orange,radius=3pt] (0,0) circle ;}%
+\newcommand{\notDetectable}{\tikz[baseline=-0.5ex]\draw[red,fill=red,radius=3pt] (0,0) circle ;}%
+
+\newcommand\YAMLcolonstyle{\color{red}}
+\newcommand\YAMLkeystyle{\color{black}}
+\newcommand\YAMLvaluestyle{\color{blue}}
+
+\lstset{
+tabsize = 2, %% set tab space width
+showstringspaces = false, %% prevent space marking in strings, string is defined as the text that is generally printed directly to the console
+numbers = none, %% don't display line numbers by default
+commentstyle = \color[HTML]{586e75}, %% set comment color
+keywordstyle = \color{blue}, %% set keyword color
+stringstyle = \color{red}, %% set string color
+rulecolor = \color{black}, %% set frame color to avoid being affected by text color
+basicstyle = \fontsize{7}{8} \ttfamily , %% set listing font and size
+breaklines = true, %% enable line breaking
+numberstyle = \tiny,
+}
+
+\lstdefinestyle{jguard}{
+  language=Java,
+  morekeywords={verified, require, initially, sets, instantiation, meta, when, returns, guard, reset, resets, state}
+}
+
+\lstdefinelanguage{CrySL}[]{Java}{
+  morekeywords={ABSTRACT, SPEC, OBJECTS, EVENTS, ORDER, CONSTRAINTS, REQUIRES, ENSURES, REFINES, define, add, constraint},
+  moredelim=[is][\textcolor{darkgray}]{\%\%}{\%\%},
+  moredelim=[il][\textcolor{darkgray}]{§§}
+}
+
+\makeatletter
+
+% here is a macro expanding to the name of the language
+% (handy if you decide to change it further down the road)
+\newcommand\language@yaml{yaml}
+
+\expandafter\expandafter\expandafter\lstdefinelanguage
+\expandafter{\language@yaml}
+{
+  keywords={true,false,null,y,n},
+  keywordstyle=\color{darkgray},
+  sensitive=false,
+  comment=[l]{\#},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\YAMLvaluestyle\ttfamily,
+  moredelim=[l][\color{orange}]{\&},
+  moredelim=[l][\color{magenta}]{*},
+  moredelim=**[il][\YAMLcolonstyle{:}\YAMLvaluestyle]{:},   % switch to value style at :
+  morestring=[b]',
+  morestring=[b]",
+  literate =    {---}{{\ProcessThreeDashes}}3
+                {>}{{\textcolor{red}\textgreater}}1     
+                {|}{{\textcolor{red}\textbar}}1 
+                {\ -\ }{{\ -\ }}3,
+}
+
+% Hint: \title{what ever}, \author{who care} and \date{when ever} could stand 
+% before or after the \begin{document} command 
+% BUT the \maketitle command MUST come AFTER the \begin{document} command! 
+\begin{document}
+
+\maketitle
+
+
+
+\label{runtimesemantics}
+\section{Runtime semantics of actions: } First, we introduce a formal specification
+for how actions impact instance guards. This is also required to follow the formal constructions used. An analogous construction can be made for static guards~\footnote{We ignore static guards for this part, because CrySL does not support a comparable mechanism.}.
+
+Let $G_i$ be the set of all declared instance guards in a program. We model the state of instance guards as a function $I$ mapping Java objects to a subset of $G_i$.
+Here, we say that a guard $g_i \in G_i$ is set for an object $o$ iff $ g_i \in I(o)$.
+%Here, $O$ denotes the set of all Java objects. 
+With this notion, an instance guard $g$ on an object $o$ evaluates to \texttt{true} iff $g \in I(o)$
+for a given guard state $I$. Executing an \textbf{Action} is defined as a state transition $f_g: I \to I'$.
+If $g$ is an instance guard reference, let $o$ be the Java object on which the
+method was called. Then, we define $I'$ as:
+
+\begin{align*}
+  I': (O \to \mathcal{P}(G_i): x \mapsto \left\{ \begin{array}{cc}
+    I(x) \cup \{ g \} & \text{if $x = o$ and is set} \\
+    I(x) \setminus \{ g \} & \text{if $x = o$ and is reset} \\
+    I(x) & \text{otherwise}
+  \end{array}  \right.
+\end{align*}
+
+This construct allows us to specify the state transition for an instance guard,
+$f_g(I) = I'$.
+When a new object $o$ of a verified class is instantiated, a similar state transition defines
+$I(o)$ as the set of all \texttt{initially set} guards to represent the object's initial guard
+state.
+
+
+Essentially, every action modifies the state of instance guards to indicate which guards are currently set for an object. \\
+
+\section{CrySL}
+\label{sec:CrySL}
+CrySL can introduce typed objects, which are essentially variables that are bound through method invocations.
+Events refer to methods in the specified class, using previously defined objects to describe arguments or return values.
+In a \texttt{CONSTRAINT} section, simple expressions may then be used to describe stateless constraints about variables declared under \texttt{OBJECTS}.
+The \texttt{ORDER} clause defines a regular expression of events describing allowed sequences of invoked methods.
+Finally, the \texttt{REQUIRES} and \texttt{ENSURES} mechanism declares stateful pre-conditions referring to other objects.
+
+As an example, consider the Java class and a matching specification in Figure \ref{fig:CrySL:JavaExample}.
+It describes a simple counter which can be incremented or decremented. 
+After changing its value through those calls, a \texttt{freeze} method returns the value of the counter and forbids
+further operations changing the counter.
+A \texttt{take} counter sets the value of the counter to the value of another counter on which \texttt{freeze} must
+have already been called.
+A counter can be initialized with or without a value.
+% In this example, assume that the empty constructor was kept
+%from a previous version (deprecated) and should not be called.
+
+The corresponding CrySL rule starts by declaring variables for all parameters used in events described later.
+Each method from the class is described with an event. Further, the two constructors and the three methods changing
+the counter are grouped into an aggregate event (\texttt{change}) for simplicity.
+Next, an \texttt{ORDER} section describes valid usage sequences in regex format, which start by initializing a counter, changing its
+values and finally calling \texttt{freeze}.
+%The constructor not meant to be called was declared as \texttt{FORBIDDEN}.
+ A requires and ensures section describes that
+the parameter to \texttt{take} must be a finalized counter. We use an example where the same CrySL rule \texttt{REQUIRES} and \texttt{ENSURES} the same predicate, but in practice predicates that are required by one rule are ensured by another, thereby enabling expression of cross-object rules.
+Finally, a \texttt{CONSTRAINT} section ensures that the parameters to \texttt{increment} and \texttt{decrement} are
+positive integers.
+
+\begin{figure}[t]
+  \begin{minipage}[t]{0.5\textwidth}
+\begin{lstlisting}[language=Java]
+class Counter {
+  public Counter() {}
+  public Counter(int startValue) {}
+
+  public void increment(int by) {}
+  public void decrement(int by) {}
+  public void take(Counter counter) {}
+  public int freeze();
+}
+\end{lstlisting}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+\begin{lstlisting}[language=CrySL]
+SPEC  org.example.Counter
+
+OBJECTS
+  int init;
+  int incBy;
+  int decBy;
+  org.example.Counter taken;
+EVENTS
+  i1:   org.example.Counter();
+  i2:   org.example.Counter(init);
+  inc:  increment(incBy);
+  dec:  decrement(decBy);
+  take: take(taken);
+  done: freeze();
+  init: i1 | i2;
+  change: inc | dec | take
+ORDER init, change*, done;
+CONSTRAINTS
+  inc > 0;
+  dec > 0;
+  notNull[taken];
+REQUIRES
+  finalized[taken];
+ENSURES
+  finalized;
+\end{lstlisting}
+\end{minipage}
+\caption{Exemplary Java class and a matching CrySL rule}
+\label{fig:CrySL:JavaExample}
+\end{figure}
+
+
+A full definition of CrySL and its formal semantics is given by Krüger \etal~\cite{CrySL}. Here, we describe map misuse categorization to CrySL concepts.  To the best of our knowledge, currently no other DSL is able to express as many misuse categories as CrySL. 
+\begin{itemize}
+\item OBJECTS and EVENTS gather parameters and methods that can be violated for a particular type. These allow expressing \textbf{Unordered usage patterns}.
+\item ORDER describes in what order methods of a particular type must be invoked. This allows one to express \textbf{sequential usage patterns}.
+\item CONSTRAINTS describe the allowed range of values for parameters to method calls. This allows one to express \textbf{Behavioral specifications/ Conditions}.
+\item ENSURES AND REQUIRES clauses describe how objects of different types must be correctly composed. By rely/guarantee-reasoning, they allow one to express the \textbf{multi-object properties} which span multiple API objects. 
+%\item An extension to CrySL called MetaCrySL~\cite{metacrysl} can accomodate usage patterns arising out of \textbf{Migration mappings} \\KN: Removed it since we dont discuss it in the Section describing CrySL.
+\end{itemize}
+\label{sec:expressiveness}
+
+Now,  we show that for every CrySL rule, we can construct equivalent jGuard annotated code building upon runtime semantics of guards described in Section~\ref{runtimesemantics}. In this paper, we will introduce the construction for The \texttt{ORDER}. We have omitted the proofs for the other sections for lack of space. If accepted, we will make available publicly the proof for similar constructions for the \texttt{CONSTRAINTS} and \texttt{ENSURES/REQUIRES} predicates. 
+% Before we describe our construction, we will describe the runtime semantics of declaring, accessing and changing guards. %%\todo{move the runtime semantics in section 3}
+
+\subsection{Expressing CrySL's Order in JGuard}\label{sec:CrySL:Order}
+
+The \texttt{ORDER} section of a CrySL rule corresponds to a DFA 
+$\mathcal{A}^o = (Q, \mathbb{M}, \delta, q_0, F)$ with $Q = \{ q_0, \ldots, q_n \}$
+defining a language $L(\mathcal{A}^o) \subseteq \mathbb{M}^*$ of allowed method sequences~\cite{CrySL}. 
+We construct a verified implementation of a class for every such DFA and complete the construction by establishing that every misuse reported by the DFA will also be reported by the constructed verified class (by showing semantic equivalence between the constructed verified class and the corresponding CrySL DFA).\\
+
+\noindent
+\textbf{Construction of a verified class corresponding to a CrySL DFA: }
+Each state in the CrySL DFA can be represented by a private guard added to the
+class. Depending on the state $q_i$, the guard is declared as follows:
+
+\begin{enumerate}
+  \item Each state $q_i$ declares a private guard named $g_i$
+  \item If $i = 0$, the guard $g_0$ is declared to be \texttt{initially set}
+  \item If $q_i \not \in F$, the guard $g_i$ is declared to be \texttt{finally reset}
+\end{enumerate}
+
+Next, we define changes to each verified method $m \in \mathbb{M}$ necessary to implement
+state transitions defined in the DFA of the CrySL rule $\mathcal{A}$. The method $m$ is replaced with a verified method, copying its original visibility,
+return type, type parameters, parameters, thrown types and body.
+For each pair $(q_i, q_j) \in Q^2$ with $\delta(q_i, m) = q_j$, a \textbf{Consequence}
+is added to $m$.
+The consequence has a \textbf{ConditionTrigger} matching $q_i$ and changing the currently
+active guard from $g_i$ to $g_j$.
+In jGuard, the syntax for such consequence is \texttt{when} $g_i$ \texttt{resets} $g_i$ \texttt{,sets} $g_j$.\\
+
+
+\textbf{Semantic equivalence of the constructed verified class and the CrySL DFA: }To show that the semantics of the constructed verified class matches the runtime semantics of the CrySL DFA, 
+let $m^o$ be a sequence of method invocations on an instance of the annotated class.
+Further, let $(s_0, \ldots, s_{n-1}) \in Q^+$ be the trace of states taken in $\mathcal{A}$
+when running over $m^o$. That is, $s_0 = q_0$ and $\delta(s_i, m_i) = s_{i+1}$ for all
+$0 \leq i < |m^o| = n$. Per induction, we show that for each such $i$, $s_i = q_j$ iff the guard $g_j$ is set.
+As mentioned in the runtime semantics of declaring guards, for $i = 0$, the initial state is $q_i$ and the only guard set is $g_i$.
+For $i > 0$, the automata is in the state $s_i = q_j$ if it has been in the state $s_{i-1} = q_k$
+before the method invocation $m_i$.
+As per the induction hypothesis, this implies that $g_k$ was the only guard active before the
+method invocation $m_i$.
+When the method returns, its consequences are evaluated. As $g_k$ is the only guard set,
+only the consequence introduced for $\delta(q_k, m_i) = q_j$ will match.
+This consequence then resets $g_k$ and sets $g_j$, satisfying the induction hypothesis. Having established that the guards in a method sequence match states taken by $\mathcal{A}$,
+we must show that a misuse is reported iff $s_{n-1} \not \in F$ (the final states).
+If $s_{n-1} = q_f$ is in $F$, the guard $g_f$ is the only guard active at the end of the method
+invocation trace. As $g_f$ has been constructed without a \texttt{finally} clause, no further
+checks are performed by jGuard and no misuse is reported.
+On the contrary, if $s_{n-1} = q_e \not \in F$, the single set guard $g_e$ has been declared
+to be \texttt{finally reset}. The semantics of jGuard mandate a misuse being reported in this case.
+
+As the construct shown here reports a misuse iff $m^o \not \in L(\mathcal{A})$ (method sequence is not valid in the language defined by the CrySL's DFA), it matches
+the runtime semantics of CrySL.
+
+
+\subsection{Expressing CrySL's Constraints in JGuard}
+
+Here, we will define a mapping from every CrySL constraint to a corresponding jGuard expression which is then used in an appropriate requirement. 
+
+In CrySL, a constraint is a boolean expression on specified objects.
+Specified objects are declared as variables. Variables are then bound in response to an event.
+Each set of bound variables must adhere to all constraints specified in a rule. One does not need to evaluate all constraints for each event to adhere to CrySL's formal semantics. An equivalent check is to evaluate only those constraints referencing variables that might have changed. We now construct a mapping $\tau$ mapping CrySL constraint $c$ to jGuard expressions. Using this expression in a \textbf{Requires} section for the method $m$ will then yield an equivalent check. For each method $m$ mentioned as an event in a CrySL rule, let $C_m$ be the set of constraints.  For each $c \in C_m$, we now define $\tau(c)$ as follows\footnote{We have listed a construction for a few CrySL constraints and omitted the rest for lack of space}.
+
+\begin{itemize}
+  \item If $c$ is of the form \texttt{c\textsubscript{1} => c\textsubscript{2}}, then $\tau(c) = \text{!}\tau(c_2) | \tau(c_1)$.
+        This is equivalent, as $a \implies b \iff \lnot a \lor b$.
+  \item If $c$ is of the form \texttt{c\textsubscript{1}<OP>c\textsubscript{2}} with <OP> being \texttt{||}, \texttt{\&\&},
+        \texttt{+}, \texttt{-}, \texttt{\%}, \texttt{*}, \texttt{/}, \texttt{<}, \texttt{<=}, \texttt{>}, \texttt{>=}, \texttt{!=} or \texttt{==}
+        then $\tau(c) = \tau(c_1) \langle OP \rangle \tau(c_2)$.
+  \item If $c$ is of the form \texttt{c\textsubscript{1}.ID} for an identifier \textit{ID}, then
+        $\tau(c) = \tau(c_1).ID$
+ 
+  \item If $c$ is of the form \texttt{elements(c\textsubscript{1}) in (c\textsubscript{2}, \dots, c\textsubscript{k})},
+        then \\
+        $\tau(c) = $ \texttt{Arrays.asStream(c\textsubscript{1}).allOf(el -> $\tau($ el in (c\textsubscript{2}, \dots, c\textsubscript{k}) $)$})
+   \item If $c$ is of the form \texttt{!c\textsubscript{1}}, then $\tau(c) = \text{!}\tau(c_1)$
+  \item If $c$ is of the form \texttt{(c\textsubscript{1})}, then $\tau(c) = (\tau(c_1))$
+  
+  \item If $c$ is a string, integer or boolean literal, $\tau(c) = c$
+  \item If $c$ is of the form \texttt{c\textsubscript{1} in (c\textsubscript{2}, \dots, c\textsubscript{k})},
+        then \\
+        $\tau(c) = $ \texttt{Arrays.asList($\tau(c_2), \ldots, \tau(c_k)$).contains($\tau(c_1)$)}.  
+  \item If $c$ is a variable reference and the method $m$ has a parameter with the same name $p$, then $\tau(c) = p$.
+  \item If $c$ is of the form \texttt{instanceof[c\textsubscript{1}, CLS]}, then $\tau(c) = \tau(c_1)$ \texttt{instanceof CLS}.
+        Similarly, \linebreak \texttt{neverTypeOf[obj, CLS]} is translated to the logical inverse.
+  \item If $c$ is of the form \texttt{length[c\textsubscript{1}]}, $\tau(c) = \tau(c_1)$ \texttt{.length}
+  \item $c$ is of the form \texttt{callTo[ID]}, consider an event $e$ with the name \texttt{ID}.
+        Next, obtain a state machine $\mathcal{A}'$ based on the DFA defined in section \ref{sec:CrySL:Order} with
+        seperate states depending on whether the $e$ has occurred or not.
+        That is, all states are duplicated with equal state transitions between them, but all state transitions for $e$
+        lead to $\mathcal{A}'$ being in a different state set.
+        Now, $c$ can be transformed into the Java expression $g_1 || \ldots || g_n$, where $g$ is the sequence of guards
+        introduced for the states active after a call to $id$.
+        Similarly, \texttt{noCallTo[ID]} can be compiled by checking for guards introduced for the original set of states.
+  \item CrySL allows extracting parts of a cipher transformation (\textit{algorithm/mode/padding}) passed to \linebreak \texttt{Cipher.getInstance}
+        these parts can be extracted by matching the inner value against a regular expression, which can be done as a single
+        Java expression.
+  
+\end{itemize}
+
+Next, each method $m$ with $C_m \neq \emptyset$ is turned into a verified method.
+All requirements $\tau(c) \mid c \in C_m$ are added to the verified method.
+This yields a construction semantically equivalent to the CrySL rule.
+
+
+CrySL supports a predicate \texttt{notHardCoded($e$)}, which evaluates to \texttt{true} iff
+the expression $e$ is not hard coded in the program's source, e.g. through a string literal.
+As this cannot be detected at runtime reliably, jGuard does not have a comparable mechanism and this
+predicate cannot be translated.
+However, it should be noted that the \texttt{notHardCoded} predicate in CrySL cannot be fully accurate either.
+It is designed to express guards against static cryptographic keys embedded in the application.
+Still, it would fail to detect constants being loaded dynamically, for instance by reading a file
+contained in the application's JAR through a class loader.
+These values are still conceptually hard coded, without being detectable by a CrySL rule.
+
+
+\subsection{Expressing CrySL's Ensures and Requires in JGuard}\label{sec:CrySL:Ensures}
+
+As defined in Section \ref{sec:CrySL}, the \texttt{ENSURES} section sets or resets a predicate, identified by the class annotated
+by a CrySL rule and a name for the predicate. Additionally, a predicate may hold arguments, which
+will be bound to variables in CrySL. Each predicate is defined on an instance $o$ of the class $C$ annotated by the CrySL rule. Further, each predicate
+has a name and a set of additional arguments $(a_0, \ldots, a_i)$.
+
+
+To express CrySL predicates in jGuard, a new class and an external state declaration is introduced. The class contains a field
+for each parameter $a_i$ in the predicate. The external state declaration is defined on this class.
+As an example, consider the generated class for the \texttt{finalized} predicate from Figure~\ref{fig:CrySL:JavaExample}:
+
+\begin{lstlisting}[style=jGuard]
+class CounterFinalized {}
+
+state CounterFinalized for Counter {
+  Set<CounterFinalized> finalized = Collections.emptySet();
+}
+\end{lstlisting}
+
+By default, predicates declared in an \texttt{ENSURES} section are added or removed in the
+last event of valid method sequences.
+In addition, CrySL allows specifying an \texttt{after} clause to perform the change after an event.
+As all events can be mapped to a state $q$ in the automaton $\mathcal{A}$ as defined in Section \ref{sec:CrySL:Order},
+we must add or remove valid predicates in response to $\mathcal{A}$ entering such state.
+
+To set a predicate with argument variables $v_0, \ldots, v_i$ in state $q$, consider all tuples
+$(q_p, m, q) \in Q \times \mathbb{M} \times Q$ with $\delta(q_p, m) = q$.
+As constructed in Section \ref{sec:CrySL:Order}, the equivalent verified method will have a \textbf{Consequence} set for this state
+transition.
+To represent a predicate being fulfilled, we add an action that sets the state variable to this consequence.
+This consequence shall construct a new instance of the predicate class with the bound variables. Note that all CrySL
+variables available in this construct refer to method parameters or its return value, which means that they can be
+transformed to jGuard expressions available in a consequence.
+The state variable is then changed to a new set containing previous predicates and the new instance.
+
+To remove an active predicate, the corresponding consequence simply sets the introduced state variable
+to a new set not including the predicate to be removed.
+
+With ensures clauses being translated to external state declarations that are set iff the
+corresponding CrySL predicate is set, a \texttt{REQUIRES} section can be translated to a jGuard requirement.
+The requirement simply queries the external state declaration on the object to verify whether a matching
+predicate exists or not.
+An absence of this predicate will cause the requirement to evaluate to \texttt{false}, causing a misuse
+to be reported.
+
+\end{document}
