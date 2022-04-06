@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - TestXSSFCell</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>TestXSSFCell</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.apache.poi.xssf.usermodel.html">org.apache.poi.xssf.usermodel</a> &gt; TestXSSFCell</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">77</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.496s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">getBooleanCellValue_returnsFalse_onABlankCell()</td>
+<td class="success">getBooleanCellValue_returnsFalse_onABlankCell()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getCellComment()</td>
+<td class="success">getCellComment()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getDateCellValue_returnsNull_onABlankCell()</td>
+<td class="success">getDateCellValue_returnsNull_onABlankCell()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getErrorCellValue_returns0_onABlankCell()</td>
+<td class="success">getErrorCellValue_returns0_onABlankCell()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">removeFormula_preservesValue()</td>
+<td class="success">removeFormula_preservesValue()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">removeFormula_turnsCellToBlank_whenFormulaWasASingleCellArrayFormula()</td>
+<td class="success">removeFormula_turnsCellToBlank_whenFormulaWasASingleCellArrayFormula()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">setAsActiveCell()</td>
+<td class="success">setAsActiveCell()</td>
+<td class="success">0.008s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">setBlank_delegatesTo_setCellType_BLANK()</td>
+<td class="success">setBlank_delegatesTo_setCellType_BLANK()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">setBlank_removesArrayFormula_ifCellIsPartOfAnArrayFormulaGroupContainingOnlyThisCell()</td>
+<td class="success">setBlank_removesArrayFormula_ifCellIsPartOfAnArrayFormulaGroupContainingOnlyThisCell()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">setBlank_throwsISE_ifCellIsPartOfAnArrayFormulaGroupContainingOtherCells()</td>
+<td class="success">setBlank_throwsISE_ifCellIsPartOfAnArrayFormulaGroupContainingOtherCells()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">setCellFormulaWithDateArithmetic()</td>
+<td class="success">setCellFormulaWithDateArithmetic()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">setCellFormula_onABlankCell_setsValueToZero()</td>
+<td class="success">setCellFormula_onABlankCell_setsValueToZero()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">setCellFormula_onAFormulaCell_changeFormula_preservesTheValue()</td>
+<td class="success">setCellFormula_onAFormulaCell_changeFormula_preservesTheValue()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">setCellFormula_onANonBlankCell_preservesTheValue()</td>
+<td class="success">setCellFormula_onANonBlankCell_preservesTheValue()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">setCellFormula_onASingleCellArrayFormulaCell_preservesTheValue()</td>
+<td class="success">setCellFormula_onASingleCellArrayFormulaCell_preservesTheValue()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">setCellFormula_throwsISE_ifCellIsPartOfAnArrayFormulaGroupContainingOtherCells()</td>
+<td class="success">setCellFormula_throwsISE_ifCellIsPartOfAnArrayFormulaGroupContainingOtherCells()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">setCellType_FORMULA_onAFormulaCell_doesNothing()</td>
+<td class="success">setCellType_FORMULA_onAFormulaCell_doesNothing()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">setCellType_FORMULA_onANonFormulaCell_throwsIllegalArgumentException()</td>
+<td class="success">setCellType_FORMULA_onANonFormulaCell_throwsIllegalArgumentException()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">setCellType_FORMULA_onAnArrayFormulaCell_doesNothing()</td>
+<td class="success">setCellType_FORMULA_onAnArrayFormulaCell_doesNothing()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">setCellType_NONE_throwsIAE()</td>
+<td class="success">setCellType_NONE_throwsIAE()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">setCellType_null_throwsIAE()</td>
+<td class="success">setCellType_null_throwsIAE()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">setStringCellValueWithRichTextString_ifThrows_shallNotChangeCell()</td>
+<td class="success">setStringCellValueWithRichTextString_ifThrows_shallNotChangeCell()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">setStringCellValue_ifThrows_shallNotChangeCell()</td>
+<td class="success">setStringCellValue_ifThrows_shallNotChangeCell()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test40296()</td>
+<td class="success">test40296()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test47026_1()</td>
+<td class="success">test47026_1()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test47026_2()</td>
+<td class="success">test47026_2()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test47278()</td>
+<td class="success">test47278()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test47889()</td>
+<td class="success">test47889()</td>
+<td class="success">0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test56170()</td>
+<td class="success">test56170()</td>
+<td class="success">0.078s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test56170Reproduce()</td>
+<td class="success">test56170Reproduce()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test57008()</td>
+<td class="success">test57008()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test61869()</td>
+<td class="success">test61869()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">test62216()</td>
+<td class="success">test62216()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testBool()</td>
+<td class="success">testBool()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testBug55658SetNumericValue()</td>
+<td class="success">testBug55658SetNumericValue()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[1] RETURN_NULL_AND_BLANK</td>
+<td class="success">testBug56644ReturnNull(MissingCellPolicy)[1]</td>
+<td class="success">0.022s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[2] RETURN_BLANK_AS_NULL</td>
+<td class="success">testBug56644ReturnNull(MissingCellPolicy)[2]</td>
+<td class="success">0.021s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[3] CREATE_NULL_AS_BLANK</td>
+<td class="success">testBug56644ReturnNull(MissingCellPolicy)[3]</td>
+<td class="success">0.020s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testBug58106RemoveSharedFormula()</td>
+<td class="success">testBug58106RemoveSharedFormula()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testChangeTypeBoolToString()</td>
+<td class="success">testChangeTypeBoolToString()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testChangeTypeErrorToBoolean()</td>
+<td class="success">testChangeTypeErrorToBoolean()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testChangeTypeErrorToNumber()</td>
+<td class="success">testChangeTypeErrorToNumber()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testChangeTypeFormulaToBoolean()</td>
+<td class="success">testChangeTypeFormulaToBoolean()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testChangeTypeStringToBool()</td>
+<td class="success">testChangeTypeStringToBool()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testConvertStringFormulaCell()</td>
+<td class="success">testConvertStringFormulaCell()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCopyCellFrom_CellCopyPolicy_copyHyperlink()</td>
+<td class="success">testCopyCellFrom_CellCopyPolicy_copyHyperlink()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCopyCellFrom_CellCopyPolicy_default()</td>
+<td class="success">testCopyCellFrom_CellCopyPolicy_default()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCopyCellFrom_CellCopyPolicy_formulaWithUnregisteredUDF()</td>
+<td class="success">testCopyCellFrom_CellCopyPolicy_formulaWithUnregisteredUDF()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCopyCellFrom_CellCopyPolicy_mergeHyperlink()</td>
+<td class="success">testCopyCellFrom_CellCopyPolicy_mergeHyperlink()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCopyCellFrom_CellCopyPolicy_style()</td>
+<td class="success">testCopyCellFrom_CellCopyPolicy_style()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCopyCellFrom_CellCopyPolicy_value()</td>
+<td class="success">testCopyCellFrom_CellCopyPolicy_value()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testDefaultStyleProperties()</td>
+<td class="success">testDefaultStyleProperties()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testEncodingBelowAscii()</td>
+<td class="success">testEncodingBelowAscii()</td>
+<td class="success">0.115s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testErr()</td>
+<td class="success">testErr()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testFormulaSetValueDoesNotChangeType()</td>
+<td class="success">testFormulaSetValueDoesNotChangeType()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testFormulaString()</td>
+<td class="success">testFormulaString()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testFormulaStyle()</td>
+<td class="success">testFormulaStyle()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testFormulaWithUnknownUDF()</td>
+<td class="success">testFormulaWithUnknownUDF()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetErrorCellValueFromFormulaCell()</td>
+<td class="success">testGetErrorCellValueFromFormulaCell()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetNumericCellValueOnABlankCellReturnsZero()</td>
+<td class="success">testGetNumericCellValueOnABlankCellReturnsZero()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testInlineString()</td>
+<td class="success">testInlineString()</td>
+<td class="success">0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testMaxTextLength()</td>
+<td class="success">testMaxTextLength()</td>
+<td class="success">0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testMissingRAttribute()</td>
+<td class="success">testMissingRAttribute()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testMissingRAttributeBug54288()</td>
+<td class="success">testMissingRAttributeBug54288()</td>
+<td class="success">0.053s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testNanAndInfinity()</td>
+<td class="success">testNanAndInfinity()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testRemoveHyperlink()</td>
+<td class="success">testRemoveHyperlink()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetBlank_bug47028()</td>
+<td class="success">testSetBlank_bug47028()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetCellValueNullRichTextString()</td>
+<td class="success">testSetCellValueNullRichTextString()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetErrorValue()</td>
+<td class="success">testSetErrorValue()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetFormulaValue()</td>
+<td class="success">testSetFormulaValue()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetNullValues()</td>
+<td class="success">testSetNullValues()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetRemoveStyle()</td>
+<td class="success">testSetRemoveStyle()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetStringInFormulaCell_bug44606()</td>
+<td class="success">testSetStringInFormulaCell_bug44606()</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetTypeStringOnFormulaCell()</td>
+<td class="success">testSetTypeStringOnFormulaCell()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetValues()</td>
+<td class="success">testSetValues()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testToString()</td>
+<td class="success">testToString()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testXmlEncoding()</td>
+<td class="success">testXmlEncoding()</td>
+<td class="success">0.006s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>10:56:42.562 [ForkJoinPool-1-worker-1] WARN  org.apache.poi.ss.formula.FormulaParser - FormulaParser.function: Name 'myFunc' is completely unknown in the current workbook.
+10:56:42.563 [ForkJoinPool-1-worker-1] WARN  org.apache.poi.ss.formula.FormulaParser - FormulaParser.function: Name 'myFunc' is completely unknown in the current workbook.
+10:56:42.567 [ForkJoinPool-1-worker-1] WARN  org.apache.poi.ss.formula.FormulaParser - FormulaParser.function: Name 'myFunc' is completely unknown in the current workbook.
+10:56:42.800 [ForkJoinPool-1-worker-1] WARN  org.apache.poi.ss.formula.FormulaParser - FormulaParser.function: Name 'MYFUNC2' is completely unknown in the current workbook.
+10:56:42.800 [ForkJoinPool-1-worker-1] WARN  org.apache.poi.ss.formula.FormulaParser - FormulaParser.function: Name 'MYFUNC2' is completely unknown in the current workbook.
+10:56:42.862 [ForkJoinPool-1-worker-1] WARN  org.apache.poi.POIDocument - DocumentSummaryInformation property set came back as null
+10:56:42.862 [ForkJoinPool-1-worker-1] WARN  org.apache.poi.POIDocument - SummaryInformation property set came back as null
+10:56:42.907 [ForkJoinPool-1-worker-1] WARN  org.apache.poi.POIDocument - DocumentSummaryInformation property set came back as null
+10:56:42.907 [ForkJoinPool-1-worker-1] WARN  org.apache.poi.POIDocument - SummaryInformation property set came back as null
+10:56:42.955 [ForkJoinPool-1-worker-1] WARN  org.apache.poi.POIDocument - DocumentSummaryInformation property set came back as null
+10:56:42.955 [ForkJoinPool-1-worker-1] WARN  org.apache.poi.POIDocument - SummaryInformation property set came back as null
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.4.1</a> at 22 Mar 2022, 10:57:07</p>
+</div>
+</div>
+</body>
+</html>

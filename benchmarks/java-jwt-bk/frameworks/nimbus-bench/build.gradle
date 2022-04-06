@@ -1,0 +1,6 @@
+dependencies {
+    api project(":jmh-utils")
+    api "com.nimbusds:nimbus-jose-jwt:${nimbusVersion}"
+
+}
+

@@ -1,0 +1,2 @@
+Result = 2285.5761494145563
+ $ÖExcelAntEvaluationResult [evaluationCompletedWithError=true, didPass=false, returnValue=0.0, errorMessage=Evaluation failed due to an evaluation error of 42 which is #N/A, actualDelta=0.0, cellName='ErrorCell'!A1]

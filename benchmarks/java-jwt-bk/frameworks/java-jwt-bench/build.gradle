@@ -1,0 +1,6 @@
+dependencies {
+    api project(":jmh-utils")
+    api("com.auth0:java-jwt:${javaJwtVersion}")
+    api("com.auth0:jwks-rsa:${jwksRsaVersion}")
+}
+

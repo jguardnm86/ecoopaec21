@@ -1,0 +1,21 @@
+jmh {
+    includes = [".+Bench.*"]
+
+    duplicateClassesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+dependencies {
+    jmh project(":frameworks:jjwt-bench")
+    jmh project(":frameworks:java-jwt-bench")
+    jmh project(":frameworks:okta-jwt-verifier-bench")
+    jmh project(":frameworks:fusionauth-jwt-bench")
+    jmh project(":frameworks:nimbus-bench")
+
+    jmh project(":jmh-utils")
+
+    jmh "org.openjdk.jmh:jmh-core:${jmhVersion}"
+    jmh "org.openjdk.jmh:jmh-generator-annprocess:${jmhVersion}"
+    jmh "org.openjdk.jmh:jmh-generator-bytecode:${jmhVersion}"
+
+    implementation files("../bouncycastle/original_bc.jar")
+}

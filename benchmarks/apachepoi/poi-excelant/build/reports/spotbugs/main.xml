@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.5.0" sequence="0" timestamp="1647942844329" analysisTimestamp="1647942844535" release="unspecified">
+  <Project projectName="poi (spotbugsMain)">
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-excelant/build/classes/java/main/org/apache/poi/ss/excelant/ExcelAntSet.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-excelant/build/classes/java/main/org/apache/poi/ss/excelant/ExcelAntTest.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-excelant/build/classes/java/main/org/apache/poi/ss/excelant/IExcelAntWorkbookHandler.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-excelant/build/classes/java/main/org/apache/poi/ss/excelant/ExcelAntPrecision.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-excelant/build/classes/java/main/org/apache/poi/ss/excelant/ExcelAntSetDoubleCell.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-excelant/build/classes/java/main/org/apache/poi/ss/excelant/ExcelAntEvaluateCell.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-excelant/build/classes/java/main/org/apache/poi/ss/excelant/ExcelAntHandlerTask.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-excelant/build/classes/java/main/org/apache/poi/ss/excelant/ExcelAntSetFormulaCell.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-excelant/build/classes/java/main/org/apache/poi/ss/excelant/ExcelAntTask.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-excelant/build/classes/java/main/org/apache/poi/ss/excelant/ExcelAntUserDefinedFunction.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-excelant/build/classes/java/main/org/apache/poi/ss/excelant/ExcelAntSetStringCell.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-excelant/build/classes/java/main/org/apache/poi/ss/excelant/util/ExcelAntWorkbookUtilFactory.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-excelant/build/classes/java/main/org/apache/poi/ss/excelant/util/ExcelAntWorkbookUtil.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-excelant/build/classes/java/main/org/apache/poi/ss/excelant/util/ExcelAntEvaluationResult.class</Jar>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant/1.10.12/be08c4f63e92e03bac761404cf77bc270928b6c5/ant-1.10.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/IdeaProjects/apache-poi/poi-ooxml/build/classes/java/main</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/IdeaProjects/apache-poi/build/dist/maven/poi-ooxml/poi-ooxml-5.2.3-SNAPSHOT.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant-launcher/1.10.12/e090b4f9d3ecf45491cc16e759f1e843a1a224c0/ant-launcher-1.10.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/IdeaProjects/apache-poi/poi/build/classes/java/main</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/IdeaProjects/apache-poi/poi-ooxml-full/build/classes/java/main</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/IdeaProjects/apache-poi/build/dist/maven/poi-ooxml-full/poi-ooxml-full-5.2.3-SNAPSHOT.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.apache.xmlbeans/xmlbeans/5.0.3/e1ef1382ae9dfb2438b82b6dd575566355c2f30f/xmlbeans-5.0.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.21/4ec95b60d4e86b5c95a0e919cb172a0af98011ef/commons-compress-1.21.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.11.0/a2503f302b11ebde7ebc3df41daebe0e4eea3689/commons-io-2.11.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/com.github.virtuald/curvesapi/1.07/863654849995f9d4f0ed2ed1a3870da3a108473c/curvesapi-1.07.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.17.2/f42d6afa111b4dec5d2aea0fe2197240749a4ea6/log4j-api-2.17.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-collections4/4.4/62ebe7544cb7164d87e0637a2a6a2bdc981395e8/commons-collections4-4.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.15/49d94806b6e3dc933dacbd8acb0fdbab8ebd1e5d/commons-codec-1.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-math3/3.6.1/e4ba98f1d4b3c80ec46392f25e094a6a2e58fcbf/commons-math3-3.6.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/com.zaxxer/SparseBitSet/1.2/8467c813d442837fcaeddbc42cf5c5359fab4933/SparseBitSet-1.2.jar</AuxClasspathEntry>
+    <SrcDir>/home/svenja/IdeaProjects/apache-poi/poi-excelant/src/main/resources</SrcDir>
+    <SrcDir>/home/svenja/IdeaProjects/apache-poi/poi-excelant/src/main/java</SrcDir>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="7d3e5dd2dec1625a774d297c5ea8ccc" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.apache.poi.ss.excelant.ExcelAntSet.setWorkbookUtil(ExcelAntWorkbookUtil) may expose internal representation by storing an externally mutable object into ExcelAntSet.wbUtil</LongMessage>
+    <Class classname="org.apache.poi.ss.excelant.ExcelAntSet" primary="true">
+      <SourceLine classname="org.apache.poi.ss.excelant.ExcelAntSet" start="23" end="40" sourcefile="ExcelAntSet.java" sourcepath="org/apache/poi/ss/excelant/ExcelAntSet.java" relSourcepath="java/org/apache/poi/ss/excelant/ExcelAntSet.java">
+        <Message>At ExcelAntSet.java:[lines 23-40]</Message>
+      </SourceLine>
+      <Message>In class org.apache.poi.ss.excelant.ExcelAntSet</Message>
+    </Class>
+    <Method classname="org.apache.poi.ss.excelant.ExcelAntSet" name="setWorkbookUtil" signature="(Lorg/apache/poi/ss/excelant/util/ExcelAntWorkbookUtil;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.poi.ss.excelant.ExcelAntSet" start="39" end="40" startBytecode="0" endBytecode="61" sourcefile="ExcelAntSet.java" sourcepath="org/apache/poi/ss/excelant/ExcelAntSet.java" relSourcepath="java/org/apache/poi/ss/excelant/ExcelAntSet.java"/>
+      <Message>In method org.apache.poi.ss.excelant.ExcelAntSet.setWorkbookUtil(ExcelAntWorkbookUtil)</Message>
+    </Method>
+    <Field classname="org.apache.poi.ss.excelant.ExcelAntSet" name="wbUtil" signature="Lorg/apache/poi/ss/excelant/util/ExcelAntWorkbookUtil;" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.poi.ss.excelant.ExcelAntSet" sourcefile="ExcelAntSet.java" sourcepath="org/apache/poi/ss/excelant/ExcelAntSet.java" relSourcepath="java/org/apache/poi/ss/excelant/ExcelAntSet.java">
+        <Message>In ExcelAntSet.java</Message>
+      </SourceLine>
+      <Message>Field org.apache.poi.ss.excelant.ExcelAntSet.wbUtil</Message>
+    </Field>
+    <LocalVariable name="wb" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named wb</Message>
+    </LocalVariable>
+    <SourceLine classname="org.apache.poi.ss.excelant.ExcelAntSet" primary="true" start="39" end="39" startBytecode="2" endBytecode="2" sourcefile="ExcelAntSet.java" sourcepath="org/apache/poi/ss/excelant/ExcelAntSet.java" relSourcepath="java/org/apache/poi/ss/excelant/ExcelAntSet.java">
+      <Message>At ExcelAntSet.java:[line 39]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="76f634f4f03ba36551474197caf14c00" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.apache.poi.ss.excelant.ExcelAntTask.addPrecision(ExcelAntPrecision) may expose internal representation by storing an externally mutable object into ExcelAntTask.precision</LongMessage>
+    <Class classname="org.apache.poi.ss.excelant.ExcelAntTask" primary="true">
+      <SourceLine classname="org.apache.poi.ss.excelant.ExcelAntTask" start="49" end="154" sourcefile="ExcelAntTask.java" sourcepath="org/apache/poi/ss/excelant/ExcelAntTask.java" relSourcepath="java/org/apache/poi/ss/excelant/ExcelAntTask.java">
+        <Message>At ExcelAntTask.java:[lines 49-154]</Message>
+      </SourceLine>
+      <Message>In class org.apache.poi.ss.excelant.ExcelAntTask</Message>
+    </Class>
+    <Method classname="org.apache.poi.ss.excelant.ExcelAntTask" name="addPrecision" signature="(Lorg/apache/poi/ss/excelant/ExcelAntPrecision;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.poi.ss.excelant.ExcelAntTask" start="55" end="56" startBytecode="0" endBytecode="61" sourcefile="ExcelAntTask.java" sourcepath="org/apache/poi/ss/excelant/ExcelAntTask.java" relSourcepath="java/org/apache/poi/ss/excelant/ExcelAntTask.java"/>
+      <Message>In method org.apache.poi.ss.excelant.ExcelAntTask.addPrecision(ExcelAntPrecision)</Message>
+    </Method>
+    <Field classname="org.apache.poi.ss.excelant.ExcelAntTask" name="precision" signature="Lorg/apache/poi/ss/excelant/ExcelAntPrecision;" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.poi.ss.excelant.ExcelAntTask" sourcefile="ExcelAntTask.java" sourcepath="org/apache/poi/ss/excelant/ExcelAntTask.java" relSourcepath="java/org/apache/poi/ss/excelant/ExcelAntTask.java">
+        <Message>In ExcelAntTask.java</Message>
+      </SourceLine>
+      <Message>Field org.apache.poi.ss.excelant.ExcelAntTask.precision</Message>
+    </Field>
+    <LocalVariable name="prec" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named prec</Message>
+    </LocalVariable>
+    <SourceLine classname="org.apache.poi.ss.excelant.ExcelAntTask" primary="true" start="55" end="55" startBytecode="2" endBytecode="2" sourcefile="ExcelAntTask.java" sourcepath="org/apache/poi/ss/excelant/ExcelAntTask.java" relSourcepath="java/org/apache/poi/ss/excelant/ExcelAntTask.java">
+      <Message>At ExcelAntTask.java:[line 55]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DCN_NULLPOINTER_EXCEPTION" priority="2" rank="17" abbrev="DCN" category="STYLE" instanceHash="14c126f2becdfe8abc8d0de3509d762" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>NullPointerException caught</ShortMessage>
+    <LongMessage>Do not catch NullPointerException like in org.apache.poi.ss.excelant.ExcelAntTest.execute()</LongMessage>
+    <Class classname="org.apache.poi.ss.excelant.ExcelAntTest" primary="true">
+      <SourceLine classname="org.apache.poi.ss.excelant.ExcelAntTest" start="53" end="204" sourcefile="ExcelAntTest.java" sourcepath="org/apache/poi/ss/excelant/ExcelAntTest.java" relSourcepath="java/org/apache/poi/ss/excelant/ExcelAntTest.java">
+        <Message>At ExcelAntTest.java:[lines 53-204]</Message>
+      </SourceLine>
+      <Message>In class org.apache.poi.ss.excelant.ExcelAntTest</Message>
+    </Class>
+    <Method classname="org.apache.poi.ss.excelant.ExcelAntTest" name="execute" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.poi.ss.excelant.ExcelAntTest" start="122" end="200" startBytecode="0" endBytecode="936" sourcefile="ExcelAntTest.java" sourcepath="org/apache/poi/ss/excelant/ExcelAntTest.java" relSourcepath="java/org/apache/poi/ss/excelant/ExcelAntTest.java"/>
+      <Message>In method org.apache.poi.ss.excelant.ExcelAntTest.execute()</Message>
+    </Method>
+    <SourceLine classname="org.apache.poi.ss.excelant.ExcelAntTest" primary="true" start="180" end="180" startBytecode="360" endBytecode="360" sourcefile="ExcelAntTest.java" sourcepath="org/apache/poi/ss/excelant/ExcelAntTest.java" relSourcepath="java/org/apache/poi/ss/excelant/ExcelAntTest.java">
+      <Message>At ExcelAntTest.java:[line 180]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="126a58683463ed8489c9e1d0d21b4f2a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>org.apache.poi.ss.excelant.ExcelAntTest.setWorkbookUtil(ExcelAntWorkbookUtil) may expose internal representation by storing an externally mutable object into ExcelAntTest.workbookUtil</LongMessage>
+    <Class classname="org.apache.poi.ss.excelant.ExcelAntTest" primary="true">
+      <SourceLine classname="org.apache.poi.ss.excelant.ExcelAntTest" start="53" end="204" sourcefile="ExcelAntTest.java" sourcepath="org/apache/poi/ss/excelant/ExcelAntTest.java" relSourcepath="java/org/apache/poi/ss/excelant/ExcelAntTest.java">
+        <Message>At ExcelAntTest.java:[lines 53-204]</Message>
+      </SourceLine>
+      <Message>In class org.apache.poi.ss.excelant.ExcelAntTest</Message>
+    </Class>
+    <Method classname="org.apache.poi.ss.excelant.ExcelAntTest" name="setWorkbookUtil" signature="(Lorg/apache/poi/ss/excelant/util/ExcelAntWorkbookUtil;)V" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.poi.ss.excelant.ExcelAntTest" start="67" end="68" startBytecode="0" endBytecode="61" sourcefile="ExcelAntTest.java" sourcepath="org/apache/poi/ss/excelant/ExcelAntTest.java" relSourcepath="java/org/apache/poi/ss/excelant/ExcelAntTest.java"/>
+      <Message>In method org.apache.poi.ss.excelant.ExcelAntTest.setWorkbookUtil(ExcelAntWorkbookUtil)</Message>
+    </Method>
+    <Field classname="org.apache.poi.ss.excelant.ExcelAntTest" name="workbookUtil" signature="Lorg/apache/poi/ss/excelant/util/ExcelAntWorkbookUtil;" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.poi.ss.excelant.ExcelAntTest" sourcefile="ExcelAntTest.java" sourcepath="org/apache/poi/ss/excelant/ExcelAntTest.java" relSourcepath="java/org/apache/poi/ss/excelant/ExcelAntTest.java">
+        <Message>In ExcelAntTest.java</Message>
+      </SourceLine>
+      <Message>Field org.apache.poi.ss.excelant.ExcelAntTest.workbookUtil</Message>
+    </Field>
+    <LocalVariable name="wbUtil" register="1" pc="2" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named wbUtil</Message>
+    </LocalVariable>
+    <SourceLine classname="org.apache.poi.ss.excelant.ExcelAntTest" primary="true" start="67" end="67" startBytecode="2" endBytecode="2" sourcefile="ExcelAntTest.java" sourcepath="org/apache/poi/ss/excelant/ExcelAntTest.java" relSourcepath="java/org/apache/poi/ss/excelant/ExcelAntTest.java">
+      <Message>At ExcelAntTest.java:[line 67]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="3b7284d30e07b348e7286a7bedbd0c80" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>org.apache.poi.ss.excelant.util.ExcelAntWorkbookUtil.getWorkbook() may expose internal representation by returning ExcelAntWorkbookUtil.workbook</LongMessage>
+    <Class classname="org.apache.poi.ss.excelant.util.ExcelAntWorkbookUtil" primary="true">
+      <SourceLine classname="org.apache.poi.ss.excelant.util.ExcelAntWorkbookUtil" start="59" end="348" sourcefile="ExcelAntWorkbookUtil.java" sourcepath="org/apache/poi/ss/excelant/util/ExcelAntWorkbookUtil.java" relSourcepath="java/org/apache/poi/ss/excelant/util/ExcelAntWorkbookUtil.java">
+        <Message>At ExcelAntWorkbookUtil.java:[lines 59-348]</Message>
+      </SourceLine>
+      <Message>In class org.apache.poi.ss.excelant.util.ExcelAntWorkbookUtil</Message>
+    </Class>
+    <Method classname="org.apache.poi.ss.excelant.util.ExcelAntWorkbookUtil" name="getWorkbook" signature="()Lorg/apache/poi/ss/usermodel/Workbook;" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.poi.ss.excelant.util.ExcelAntWorkbookUtil" start="193" end="193" startBytecode="0" endBytecode="46" sourcefile="ExcelAntWorkbookUtil.java" sourcepath="org/apache/poi/ss/excelant/util/ExcelAntWorkbookUtil.java" relSourcepath="java/org/apache/poi/ss/excelant/util/ExcelAntWorkbookUtil.java"/>
+      <Message>In method org.apache.poi.ss.excelant.util.ExcelAntWorkbookUtil.getWorkbook()</Message>
+    </Method>
+    <Field classname="org.apache.poi.ss.excelant.util.ExcelAntWorkbookUtil" name="workbook" signature="Lorg/apache/poi/ss/usermodel/Workbook;" isStatic="false" primary="true">
+      <SourceLine classname="org.apache.poi.ss.excelant.util.ExcelAntWorkbookUtil" sourcefile="ExcelAntWorkbookUtil.java" sourcepath="org/apache/poi/ss/excelant/util/ExcelAntWorkbookUtil.java" relSourcepath="java/org/apache/poi/ss/excelant/util/ExcelAntWorkbookUtil.java">
+        <Message>In ExcelAntWorkbookUtil.java</Message>
+      </SourceLine>
+      <Message>Field org.apache.poi.ss.excelant.util.ExcelAntWorkbookUtil.workbook</Message>
+    </Field>
+    <SourceLine classname="org.apache.poi.ss.excelant.util.ExcelAntWorkbookUtil" primary="true" start="193" end="193" startBytecode="4" endBytecode="4" sourcefile="ExcelAntWorkbookUtil.java" sourcepath="org/apache/poi/ss/excelant/util/ExcelAntWorkbookUtil.java" relSourcepath="java/org/apache/poi/ss/excelant/util/ExcelAntWorkbookUtil.java">
+      <Message>At ExcelAntWorkbookUtil.java:[line 193]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DCN_NULLPOINTER_EXCEPTION" abbrev="DCN" category="STYLE">
+    <ShortDescription>NullPointerException caught</ShortDescription>
+    <Details><![CDATA[
+   
+<p>
+According to SEI Cert rule <a href="https://wiki.sei.cmu.edu/confluence/display/java/ERR08-J.+Do+not+catch+NullPointerException+or+any+of+its+ancestors">ERR08-J</a> NullPointerException should not be caught. Handling NullPointerException is considered an inferior alternative to null-checking.
+<p>
+This non-compliant code catches a NullPointerException to see if an incoming parameter is null:
+</p>
+<pre><code>
+boolean hasSpace(String m) {
+  try {
+    String ms[] = m.split(" ");
+    return names.length != 1;
+  } catch (NullPointerException e) {
+    return false;
+  }
+}
+</code></pre>
+<p>
+A compliant solution would use a null-check as in the following example:
+</p>
+<pre><code>
+boolean hasSpace(String m) {
+    if (m == null) return false;
+    String ms[] = m.split(" ");
+    return names.length != 1;
+}
+</code></pre>
+    
+     ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="DCN">
+    <Description>Don&apos;t Catch NullPointer Exception</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 22 Mar 2022 10:54:04 +0100" total_classes="14" referenced_classes="110" total_bugs="5" total_size="520" num_packages="2" java_version="17.0.3" vm_version="17.0.3+3" cpu_seconds="16.22" clock_seconds="14.90" peak_mbytes="184.32" alloc_mbytes="512.00" gc_seconds="0.17" priority_2="5">
+    <FileStats path="org/apache/poi/ss/excelant/ExcelAntEvaluateCell.java" bugCount="0" size="63"/>
+    <FileStats path="org/apache/poi/ss/excelant/ExcelAntHandlerTask.java" bugCount="0" size="23"/>
+    <FileStats path="org/apache/poi/ss/excelant/ExcelAntPrecision.java" bugCount="0" size="9"/>
+    <FileStats path="org/apache/poi/ss/excelant/ExcelAntSet.java" bugCount="1" size="13" bugHash="03823662b95516c6bfe40df1ca263814"/>
+    <FileStats path="org/apache/poi/ss/excelant/ExcelAntSetDoubleCell.java" bugCount="0" size="13"/>
+    <FileStats path="org/apache/poi/ss/excelant/ExcelAntSetFormulaCell.java" bugCount="0" size="13"/>
+    <FileStats path="org/apache/poi/ss/excelant/ExcelAntSetStringCell.java" bugCount="0" size="13"/>
+    <FileStats path="org/apache/poi/ss/excelant/ExcelAntTask.java" bugCount="1" size="78" bugHash="79d7c6267f502ce0ccff3f36602730e5"/>
+    <FileStats path="org/apache/poi/ss/excelant/ExcelAntTest.java" bugCount="2" size="106" bugHash="aa99efb6180190baf0caf40532fbda64"/>
+    <FileStats path="org/apache/poi/ss/excelant/ExcelAntUserDefinedFunction.java" bugCount="0" size="17"/>
+    <FileStats path="org/apache/poi/ss/excelant/IExcelAntWorkbookHandler.java" bugCount="0" size="3"/>
+    <FileStats path="org/apache/poi/ss/excelant/util/ExcelAntEvaluationResult.java" bugCount="0" size="30"/>
+    <FileStats path="org/apache/poi/ss/excelant/util/ExcelAntWorkbookUtil.java" bugCount="1" size="126" bugHash="60415d363783f45435d1e0d6d275f9e1"/>
+    <FileStats path="org/apache/poi/ss/excelant/util/ExcelAntWorkbookUtilFactory.java" bugCount="0" size="13"/>
+    <PackageStats package="org.apache.poi.ss.excelant" total_bugs="4" total_types="11" total_size="351" priority_2="4">
+      <ClassStats class="org.apache.poi.ss.excelant.ExcelAntEvaluateCell" sourceFile="ExcelAntEvaluateCell.java" interface="false" size="63" bugs="0"/>
+      <ClassStats class="org.apache.poi.ss.excelant.ExcelAntHandlerTask" sourceFile="ExcelAntHandlerTask.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="org.apache.poi.ss.excelant.ExcelAntPrecision" sourceFile="ExcelAntPrecision.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="org.apache.poi.ss.excelant.ExcelAntSet" sourceFile="ExcelAntSet.java" interface="false" size="13" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.poi.ss.excelant.ExcelAntSetDoubleCell" sourceFile="ExcelAntSetDoubleCell.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.poi.ss.excelant.ExcelAntSetFormulaCell" sourceFile="ExcelAntSetFormulaCell.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.poi.ss.excelant.ExcelAntSetStringCell" sourceFile="ExcelAntSetStringCell.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="org.apache.poi.ss.excelant.ExcelAntTask" sourceFile="ExcelAntTask.java" interface="false" size="78" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.poi.ss.excelant.ExcelAntTest" sourceFile="ExcelAntTest.java" interface="false" size="106" bugs="2" priority_2="2"/>
+      <ClassStats class="org.apache.poi.ss.excelant.ExcelAntUserDefinedFunction" sourceFile="ExcelAntUserDefinedFunction.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="org.apache.poi.ss.excelant.IExcelAntWorkbookHandler" sourceFile="IExcelAntWorkbookHandler.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="org.apache.poi.ss.excelant.util" total_bugs="1" total_types="3" total_size="169" priority_2="1">
+      <ClassStats class="org.apache.poi.ss.excelant.util.ExcelAntEvaluationResult" sourceFile="ExcelAntEvaluationResult.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.apache.poi.ss.excelant.util.ExcelAntWorkbookUtil" sourceFile="ExcelAntWorkbookUtil.java" interface="false" size="126" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.poi.ss.excelant.util.ExcelAntWorkbookUtilFactory" sourceFile="ExcelAntWorkbookUtilFactory.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="2707" invocations="1155" avgMicrosecondsPerInvocation="2343" maxMicrosecondsPerInvocation="65045" standardDeviationMicrosecondsPerInvocation="6938"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="972" invocations="110" avgMicrosecondsPerInvocation="8841" maxMicrosecondsPerInvocation="111433" standardDeviationMicrosecondsPerInvocation="20135"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="864" invocations="1160" avgMicrosecondsPerInvocation="745" maxMicrosecondsPerInvocation="55391" standardDeviationMicrosecondsPerInvocation="3977"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="777" invocations="110" avgMicrosecondsPerInvocation="7064" maxMicrosecondsPerInvocation="86496" standardDeviationMicrosecondsPerInvocation="14866"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="565" invocations="438" avgMicrosecondsPerInvocation="1290" maxMicrosecondsPerInvocation="54967" standardDeviationMicrosecondsPerInvocation="4602"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="383" invocations="110" avgMicrosecondsPerInvocation="3484" maxMicrosecondsPerInvocation="59335" standardDeviationMicrosecondsPerInvocation="8598"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="354" invocations="181" avgMicrosecondsPerInvocation="1960" maxMicrosecondsPerInvocation="96720" standardDeviationMicrosecondsPerInvocation="8467"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="327" invocations="99" avgMicrosecondsPerInvocation="3303" maxMicrosecondsPerInvocation="84944" standardDeviationMicrosecondsPerInvocation="12278"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="285" invocations="1116" avgMicrosecondsPerInvocation="256" maxMicrosecondsPerInvocation="30694" standardDeviationMicrosecondsPerInvocation="1915"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="275" invocations="110" avgMicrosecondsPerInvocation="2503" maxMicrosecondsPerInvocation="52564" standardDeviationMicrosecondsPerInvocation="8283"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="239" invocations="98" avgMicrosecondsPerInvocation="2441" maxMicrosecondsPerInvocation="39301" standardDeviationMicrosecondsPerInvocation="7368"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="233" invocations="97" avgMicrosecondsPerInvocation="2411" maxMicrosecondsPerInvocation="41523" standardDeviationMicrosecondsPerInvocation="6832"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildStringPassthruGraph" totalMilliseconds="216" invocations="110" avgMicrosecondsPerInvocation="1967" maxMicrosecondsPerInvocation="24257" standardDeviationMicrosecondsPerInvocation="4900"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="207" invocations="110" avgMicrosecondsPerInvocation="1886" maxMicrosecondsPerInvocation="52483" standardDeviationMicrosecondsPerInvocation="7499"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="201" invocations="97" avgMicrosecondsPerInvocation="2076" maxMicrosecondsPerInvocation="48866" standardDeviationMicrosecondsPerInvocation="7350"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.EqualsOperandShouldHaveClassCompatibleWithThis" totalMilliseconds="175" invocations="110" avgMicrosecondsPerInvocation="1596" maxMicrosecondsPerInvocation="33641" standardDeviationMicrosecondsPerInvocation="5699"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="145" invocations="110" avgMicrosecondsPerInvocation="1326" maxMicrosecondsPerInvocation="28614" standardDeviationMicrosecondsPerInvocation="3851"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="145" invocations="110" avgMicrosecondsPerInvocation="1320" maxMicrosecondsPerInvocation="21731" standardDeviationMicrosecondsPerInvocation="3627"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

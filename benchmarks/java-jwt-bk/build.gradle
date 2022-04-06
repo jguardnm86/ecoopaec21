@@ -1,0 +1,125 @@
+plugins {
+    id 'me.champeau.jmh' version '0.6.5' apply false
+    id 'com.github.ben-manes.versions' version '0.39.0' apply false
+    id 'org.owasp.dependencycheck' version '6.2.2' apply false
+    id "com.github.spotbugs" version "4.7.2" apply false
+    id 'io.morethan.jmhreport' version '0.9.0' apply false
+}
+
+ext {
+    javaJwtVersion = '3.18.1'
+    jwksRsaVersion = '0.19.0'
+    jjwtVersion = '0.11.2'
+    nimbusVersion = '9.13'
+    jmhVersion = '1.34'
+    oktaVersion = '0.5.1'
+    fusionAuthVersion = '4.3.0'
+    junitJupiterVersion = '5.7.2'
+    jaxbVersion = '2.3.1'
+}
+
+def buildProjects() {
+    subprojects.findAll { new File(it.projectDir, 'build.gradle').file }
+}
+
+def libraryProjects() {
+    buildProjects().findAll { !it.name.equals("jmh-benchmark") }
+}
+
+configure(libraryProjects()) {
+    apply plugin: 'java-library'
+}
+
+configure(project(':jmh-benchmark')) {
+    apply plugin: 'java'
+    apply plugin: 'io.morethan.jmhreport'
+    apply plugin: 'me.champeau.jmh'
+
+    jmh {
+        resultFormat = 'JSON'
+
+        warmup = '2s'
+        warmupIterations = 10
+
+        fork = 1
+        timeOnIteration = '10s'
+        iterations = 6
+        benchmarkMode = ['thrpt']
+
+        jvmArgs = ['-XX:+UseG1GC']
+    }
+
+    jmhReport {
+        jmhResultPath = project.file("build/results/jmh/results.json")
+        jmhReportOutput = project.file("build/results/jmh")
+    }
+
+    tasks.jmh.finalizedBy tasks.jmhReport
+}
+
+
+configure(buildProjects()) {
+    apply plugin: 'com.github.ben-manes.versions'
+    apply plugin: 'org.owasp.dependencycheck'
+    apply plugin: 'com.github.spotbugs'
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+    test {
+        useJUnitPlatform {
+            includeEngines 'junit-jupiter'
+        }
+
+        reports {
+            html.enabled = true
+        }
+    }
+
+    dependencies {
+        testImplementation "org.junit.jupiter:junit-jupiter-api:${junitJupiterVersion}"
+        testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junitJupiterVersion}"
+    }
+
+    spotbugsMain {
+        reports {
+            xml.enabled = false
+            html.enabled = true
+        }
+    }
+
+    tasks.matching { task -> task.name.startsWith('spotbugs') }.forEach {
+        it.reports {
+            html.enabled = true
+            xml.enabled = false
+            // spotbugs does not allow to generate a xml and html report at once https://github.com/spotbugs/spotbugs/issues/857
+        }
+        // it.excludeFilter = file("$rootDir/spotbugs-exclude.xml")
+    }
+}
+
+configure(buildProjects()) {
+    apply plugin: 'eclipse'
+    apply plugin: 'idea'
+
+    eclipse {
+        classpath {
+            downloadSources = true
+            downloadJavadoc = true
+        }
+    }
+
+    // Tell idea to output to build/classes/main instead of /out/
+    idea {
+        module {
+            outputDir file('build/classes/main')
+            testOutputDir file('build/classes/test')
+        }
+    }
+
+}

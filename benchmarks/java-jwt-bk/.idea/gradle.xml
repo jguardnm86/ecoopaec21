@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="delegatedBuild" value="true" />
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/frameworks" />
+            <option value="$PROJECT_DIR$/frameworks/fusionauth-jwt-bench" />
+            <option value="$PROJECT_DIR$/frameworks/java-jwt-bench" />
+            <option value="$PROJECT_DIR$/frameworks/jjwt-bench" />
+            <option value="$PROJECT_DIR$/frameworks/nimbus-bench" />
+            <option value="$PROJECT_DIR$/frameworks/okta-jwt-verifier-bench" />
+            <option value="$PROJECT_DIR$/jmh-benchmark" />
+            <option value="$PROJECT_DIR$/jmh-utils" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

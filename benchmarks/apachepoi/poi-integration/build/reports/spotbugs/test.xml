@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.5.0" sequence="0" timestamp="1647944265400" analysisTimestamp="1647944265401" release="unspecified">
+  <Project projectName="poi (spotbugsTest)">
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/HWPFFileHandler.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/TestAllFiles.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/HSSFFileHandler.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/SlideShowHandler.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/POIXMLDocumentHandler.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/HSMFFileHandler.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/StressMap.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/SpreadsheetHandler.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/StressTestUtils.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/ExcInfo.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/FileHandler.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/XDGFFileHandler.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/HPBFFileHandler.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/AbstractFileHandler.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/XWPFFileHandler.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/POIFSFileHandler.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/OPCFileHandler.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/HDGFFileHandler.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/FileHandlerKnown$NullFileHandler.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/OWPFFileHandler.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/XSLFFileHandler.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/HSLFFileHandler.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/FileHandlerKnown$1.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/XSSFFileHandler.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/FileHandlerKnown.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/BaseIntegrationTest.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/XSSFBFileHandler.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/HeapDump.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/HMEFFileHandler.class</Jar>
+    <Jar>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/test/org/apache/poi/stress/HPSFFileHandler.class</Jar>
+    <AuxClasspathEntry>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/classes/java/main</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/IdeaProjects/apache-poi/poi-integration/build/resources/main</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.8.2/ddeafe92fc263f895bfb73ffeca7fd56e23c2cce/junit-jupiter-params-5.8.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.8.2/4c21029217adf07e4c0d0c5e192b6bf610c94bdc/junit-jupiter-api-5.8.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.8.2/32c8b8617c1342376fd5af2053da6410d8866861/junit-platform-commons-1.8.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter/5.8.2/5a817b1e63f1217e5c586090c45e681281f097ad/junit-jupiter-5.8.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/4.4.0/1ab8a2f7fc27702ebc136068476a6cdef5dbd5b9/mockito-core-4.4.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest/2.2/1820c0968dba3a11a1b30669bb1f01978a91dedc/hamcrest-2.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-core/2.17.2/fa43ba4467f5300b16d1e0742934149bfc5ac564/log4j-core-2.17.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant/1.10.12/be08c4f63e92e03bac761404cf77bc270928b6c5/ant-1.10.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/IdeaProjects/apache-poi/poi-scratchpad/build/classes/java/main</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/IdeaProjects/apache-poi/build/dist/maven/poi-scratchpad-tests/poi-scratchpad-5.2.3-SNAPSHOT-tests.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/IdeaProjects/apache-poi/poi-examples/build/classes/java/main</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/IdeaProjects/apache-poi/build/dist/maven/poi-examples/poi-examples-5.2.3-SNAPSHOT.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/IdeaProjects/apache-poi/build/dist/maven/poi-ooxml-tests/poi-ooxml-5.2.3-SNAPSHOT-tests.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/IdeaProjects/apache-poi/poi-ooxml/build/classes/java/main</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/IdeaProjects/apache-poi/build/dist/maven/poi-tests/poi-5.2.3-SNAPSHOT-tests.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/IdeaProjects/apache-poi/poi/build/classes/java/main</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/IdeaProjects/apache-poi/build/dist/maven/poi/poi-5.2.3-SNAPSHOT.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-collections4/4.4/62ebe7544cb7164d87e0637a2a6a2bdc981395e8/commons-collections4-4.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/31.1-jre/60458f877d055d0c9114d9e1a2efb737b4bc282c/guava-31.1-jre.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/IdeaProjects/apache-poi/build/dist/maven/poi-ooxml-lite-agent/poi-ooxml-lite-agent-5.2.3-SNAPSHOT.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-slf4j18-impl/2.17.2/79462d0451b93106225395b03362b1965984533b/log4j-slf4j18-impl-2.17.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-simple/1.7.36/a41f9cfe6faafb2eb83a1c7dd2d0dfd844e2a936/slf4j-simple-1.7.36.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.12.8/aa42edb39e624cbf8a5b33cb5c5e920027cee42b/byte-buddy-1.12.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.12.8/a84042b14eb2751c732f2d6ee22d6bf51005114b/byte-buddy-agent-1.12.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/IdeaProjects/apache-poi/poi-ooxml-full/build/classes/java/main</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/IdeaProjects/apache-poi/build/dist/maven/poi-ooxml-full/poi-ooxml-full-5.2.3-SNAPSHOT.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.apache.xmlbeans/xmlbeans/5.0.3/e1ef1382ae9dfb2438b82b6dd575566355c2f30f/xmlbeans-5.0.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.17.2/f42d6afa111b4dec5d2aea0fe2197240749a4ea6/log4j-api-2.17.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.apache.ant/ant-launcher/1.10.12/e090b4f9d3ecf45491cc16e759f1e843a1a224c0/ant-launcher-1.10.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/com.google.guava/failureaccess/1.0.1/1dcf1de382a0bf95a3d8b0849546c88bac1292c9/failureaccess-1.0.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/com.google.guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/b421526c5f297295adef1c886e5246c39d4ac629/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/3.12.0/d5692f0526415fcc6de94bb5bfbd3afd9dd3b3e5/checker-qual-3.12.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.11.0/c5a0ace696d3f8b1c1d8cc036d8c03cc0cbe6b69/error_prone_annotations-2.11.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/1.3/ba035118bc8bac37d7eff77700720999acd9986d/j2objc-annotations-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-math3/3.6.1/e4ba98f1d4b3c80ec46392f25e094a6a2e58fcbf/commons-math3-3.6.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/commons-codec/commons-codec/1.15/49d94806b6e3dc933dacbd8acb0fdbab8ebd1e5d/commons-codec-1.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.36/6c62681a2f655b49963a5983b8b0950a6120ae14/slf4j-api-1.7.36.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.2.0/28c11eb91f9b6d8e200631d46e20a7f407f2a046/opentest4j-1.2.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.1.2/a231e0d844d2721b0fa1b238006d15c6ded6842a/apiguardian-api-1.1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.11.0/a2503f302b11ebde7ebc3df41daebe0e4eea3689/commons-io-2.11.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/com.zaxxer/SparseBitSet/1.2/8467c813d442837fcaeddbc42cf5c5359fab4933/SparseBitSet-1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.21/4ec95b60d4e86b5c95a0e919cb172a0af98011ef/commons-compress-1.21.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/svenja/.gradle/caches/modules-2/files-2.1/com.github.virtuald/curvesapi/1.07/863654849995f9d4f0ed2ed1a3870da3a108473c/curvesapi-1.07.jar</AuxClasspathEntry>
+    <SrcDir>/home/svenja/IdeaProjects/apache-poi/poi-integration/src/test/resources</SrcDir>
+    <SrcDir>/home/svenja/IdeaProjects/apache-poi/poi-integration/src/test/java</SrcDir>
+  </Project>
+  <BugInstance type="MS_MUTABLE_COLLECTION_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="e5d71cb0bb073d6d19128fbfb0047c2c" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field is a mutable collection which should be package protected</ShortMessage>
+    <LongMessage>org.apache.poi.stress.AbstractFileHandler.EXPECTED_EXTRACTOR_FAILURES is a mutable collection which should be package protected</LongMessage>
+    <Class classname="org.apache.poi.stress.AbstractFileHandler" primary="true">
+      <SourceLine classname="org.apache.poi.stress.AbstractFileHandler" start="46" end="180" sourcefile="AbstractFileHandler.java" sourcepath="org/apache/poi/stress/AbstractFileHandler.java" relSourcepath="java/org/apache/poi/stress/AbstractFileHandler.java">
+        <Message>At AbstractFileHandler.java:[lines 46-180]</Message>
+      </SourceLine>
+      <Message>In class org.apache.poi.stress.AbstractFileHandler</Message>
+    </Class>
+    <Field classname="org.apache.poi.stress.AbstractFileHandler" name="EXPECTED_EXTRACTOR_FAILURES" signature="Ljava/util/Set;" isStatic="true" primary="true">
+      <SourceLine classname="org.apache.poi.stress.AbstractFileHandler" sourcefile="AbstractFileHandler.java" sourcepath="org/apache/poi/stress/AbstractFileHandler.java" relSourcepath="java/org/apache/poi/stress/AbstractFileHandler.java">
+        <Message>In AbstractFileHandler.java</Message>
+      </SourceLine>
+      <Message>Field org.apache.poi.stress.AbstractFileHandler.EXPECTED_EXTRACTOR_FAILURES</Message>
+    </Field>
+    <SourceLine classname="org.apache.poi.stress.AbstractFileHandler" primary="true" start="48" end="48" startBytecode="63" endBytecode="63" sourcefile="AbstractFileHandler.java" sourcepath="org/apache/poi/stress/AbstractFileHandler.java" relSourcepath="java/org/apache/poi/stress/AbstractFileHandler.java">
+      <Message>At AbstractFileHandler.java:[line 48]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="ec2c5ed900b19a746de2d7f924a39004" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field should be package protected</ShortMessage>
+    <LongMessage>org.apache.poi.stress.TestAllFiles.SCAN_EXCLUDES should be package protected</LongMessage>
+    <Class classname="org.apache.poi.stress.TestAllFiles" primary="true">
+      <SourceLine classname="org.apache.poi.stress.TestAllFiles" start="72" end="271" sourcefile="TestAllFiles.java" sourcepath="org/apache/poi/stress/TestAllFiles.java" relSourcepath="java/org/apache/poi/stress/TestAllFiles.java">
+        <Message>At TestAllFiles.java:[lines 72-271]</Message>
+      </SourceLine>
+      <Message>In class org.apache.poi.stress.TestAllFiles</Message>
+    </Class>
+    <Field classname="org.apache.poi.stress.TestAllFiles" name="SCAN_EXCLUDES" signature="[Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="org.apache.poi.stress.TestAllFiles" sourcefile="TestAllFiles.java" sourcepath="org/apache/poi/stress/TestAllFiles.java" relSourcepath="java/org/apache/poi/stress/TestAllFiles.java">
+        <Message>In TestAllFiles.java</Message>
+      </SourceLine>
+      <Message>Field org.apache.poi.stress.TestAllFiles.SCAN_EXCLUDES</Message>
+    </Field>
+    <SourceLine classname="org.apache.poi.stress.TestAllFiles" primary="true" start="76" end="76" startBytecode="70" endBytecode="70" sourcefile="TestAllFiles.java" sourcepath="org/apache/poi/stress/TestAllFiles.java" relSourcepath="java/org/apache/poi/stress/TestAllFiles.java">
+      <Message>At TestAllFiles.java:[line 76]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" instanceHash="a48bcf4218b61f3a49a3ee3e35fa898a" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="218">
+    <ShortMessage>Field should be package protected</ShortMessage>
+    <LongMessage>org.apache.poi.stress.TestAllFiles.SCAN_EXCLUDES_NOSCRATCHPAD should be package protected</LongMessage>
+    <Class classname="org.apache.poi.stress.TestAllFiles" primary="true">
+      <SourceLine classname="org.apache.poi.stress.TestAllFiles" start="72" end="271" sourcefile="TestAllFiles.java" sourcepath="org/apache/poi/stress/TestAllFiles.java" relSourcepath="java/org/apache/poi/stress/TestAllFiles.java">
+        <Message>At TestAllFiles.java:[lines 72-271]</Message>
+      </SourceLine>
+      <Message>In class org.apache.poi.stress.TestAllFiles</Message>
+    </Class>
+    <Field classname="org.apache.poi.stress.TestAllFiles" name="SCAN_EXCLUDES_NOSCRATCHPAD" signature="[Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="org.apache.poi.stress.TestAllFiles" sourcefile="TestAllFiles.java" sourcepath="org/apache/poi/stress/TestAllFiles.java" relSourcepath="java/org/apache/poi/stress/TestAllFiles.java">
+        <Message>In TestAllFiles.java</Message>
+      </SourceLine>
+      <Message>Field org.apache.poi.stress.TestAllFiles.SCAN_EXCLUDES_NOSCRATCHPAD</Message>
+    </Field>
+    <SourceLine classname="org.apache.poi.stress.TestAllFiles" primary="true" start="92" end="92" startBytecode="216" endBytecode="216" sourcefile="TestAllFiles.java" sourcepath="org/apache/poi/stress/TestAllFiles.java" relSourcepath="java/org/apache/poi/stress/TestAllFiles.java">
+      <Message>At TestAllFiles.java:[line 92]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugPattern type="MS_MUTABLE_COLLECTION_PKGPROTECT" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field is a mutable collection which should be package protected</ShortDescription>
+    <Details><![CDATA[
+
+ <p>A mutable collection instance is assigned to a final static field,
+   thus can be changed by malicious code or by accident from another package.
+   The field could be made package protected to avoid this vulnerability.
+   Alternatively you may wrap this field into Collections.unmodifiableSet/List/Map/etc.
+   to avoid this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="MS_PKGPROTECT" abbrev="MS" category="MALICIOUS_CODE">
+    <ShortDescription>Field should be package protected</ShortDescription>
+    <Details><![CDATA[
+
+  <p> A mutable static field could be changed by malicious code or
+   by accident.
+   The field could be made package protected to avoid
+   this vulnerability.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="MS" cweid="218">
+    <Description>Mutable static field</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 22 Mar 2022 11:17:45 +0100" total_classes="30" referenced_classes="275" total_bugs="3" total_size="1342" num_packages="1" java_version="17.0.3" vm_version="17.0.3+3" cpu_seconds="3.27" clock_seconds="1.13" peak_mbytes="656.98" alloc_mbytes="512.00" gc_seconds="0.04" priority_2="3">
+    <FileStats path="org/apache/poi/stress/AbstractFileHandler.java" bugCount="1" size="74" bugHash="bb214f3569148dc9352b44c29c3df30e"/>
+    <FileStats path="org/apache/poi/stress/BaseIntegrationTest.java" bugCount="0" size="83"/>
+    <FileStats path="org/apache/poi/stress/ExcInfo.java" bugCount="0" size="52"/>
+    <FileStats path="org/apache/poi/stress/FileHandler.java" bugCount="0" size="4"/>
+    <FileStats path="org/apache/poi/stress/FileHandlerKnown.java" bugCount="0" size="58"/>
+    <FileStats path="org/apache/poi/stress/HDGFFileHandler.java" bugCount="0" size="30"/>
+    <FileStats path="org/apache/poi/stress/HMEFFileHandler.java" bugCount="0" size="38"/>
+    <FileStats path="org/apache/poi/stress/HPBFFileHandler.java" bugCount="0" size="24"/>
+    <FileStats path="org/apache/poi/stress/HPSFFileHandler.java" bugCount="0" size="71"/>
+    <FileStats path="org/apache/poi/stress/HSLFFileHandler.java" bugCount="0" size="47"/>
+    <FileStats path="org/apache/poi/stress/HSMFFileHandler.java" bugCount="0" size="25"/>
+    <FileStats path="org/apache/poi/stress/HSSFFileHandler.java" bugCount="0" size="55"/>
+    <FileStats path="org/apache/poi/stress/HWPFFileHandler.java" bugCount="0" size="29"/>
+    <FileStats path="org/apache/poi/stress/HeapDump.java" bugCount="0" size="37"/>
+    <FileStats path="org/apache/poi/stress/OPCFileHandler.java" bugCount="0" size="31"/>
+    <FileStats path="org/apache/poi/stress/OWPFFileHandler.java" bugCount="0" size="26"/>
+    <FileStats path="org/apache/poi/stress/POIFSFileHandler.java" bugCount="0" size="37"/>
+    <FileStats path="org/apache/poi/stress/POIXMLDocumentHandler.java" bugCount="0" size="36"/>
+    <FileStats path="org/apache/poi/stress/SlideShowHandler.java" bugCount="0" size="80"/>
+    <FileStats path="org/apache/poi/stress/SpreadsheetHandler.java" bugCount="0" size="66"/>
+    <FileStats path="org/apache/poi/stress/StressMap.java" bugCount="0" size="95"/>
+    <FileStats path="org/apache/poi/stress/StressTestUtils.java" bugCount="0" size="8"/>
+    <FileStats path="org/apache/poi/stress/TestAllFiles.java" bugCount="2" size="111" bugHash="e6b2b2fc7acebd4c898b27fa36f5d0ec"/>
+    <FileStats path="org/apache/poi/stress/XDGFFileHandler.java" bugCount="0" size="14"/>
+    <FileStats path="org/apache/poi/stress/XSLFFileHandler.java" bugCount="0" size="38"/>
+    <FileStats path="org/apache/poi/stress/XSSFBFileHandler.java" bugCount="0" size="41"/>
+    <FileStats path="org/apache/poi/stress/XSSFFileHandler.java" bugCount="0" size="107"/>
+    <FileStats path="org/apache/poi/stress/XWPFFileHandler.java" bugCount="0" size="25"/>
+    <PackageStats package="org.apache.poi.stress" total_bugs="3" total_types="30" total_size="1342" priority_2="3">
+      <ClassStats class="org.apache.poi.stress.AbstractFileHandler" sourceFile="AbstractFileHandler.java" interface="false" size="74" bugs="1" priority_2="1"/>
+      <ClassStats class="org.apache.poi.stress.BaseIntegrationTest" sourceFile="BaseIntegrationTest.java" interface="false" size="83" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.ExcInfo" sourceFile="ExcInfo.java" interface="false" size="52" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.FileHandler" sourceFile="FileHandler.java" interface="true" size="4" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.FileHandlerKnown" sourceFile="FileHandlerKnown.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.FileHandlerKnown$1" sourceFile="FileHandlerKnown.java" interface="false" size="1" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.FileHandlerKnown$NullFileHandler" sourceFile="FileHandlerKnown.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.HDGFFileHandler" sourceFile="HDGFFileHandler.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.HMEFFileHandler" sourceFile="HMEFFileHandler.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.HPBFFileHandler" sourceFile="HPBFFileHandler.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.HPSFFileHandler" sourceFile="HPSFFileHandler.java" interface="false" size="71" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.HSLFFileHandler" sourceFile="HSLFFileHandler.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.HSMFFileHandler" sourceFile="HSMFFileHandler.java" interface="false" size="25" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.HSSFFileHandler" sourceFile="HSSFFileHandler.java" interface="false" size="55" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.HWPFFileHandler" sourceFile="HWPFFileHandler.java" interface="false" size="29" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.HeapDump" sourceFile="HeapDump.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.OPCFileHandler" sourceFile="OPCFileHandler.java" interface="false" size="31" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.OWPFFileHandler" sourceFile="OWPFFileHandler.java" interface="false" size="26" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.POIFSFileHandler" sourceFile="POIFSFileHandler.java" interface="false" size="37" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.POIXMLDocumentHandler" sourceFile="POIXMLDocumentHandler.java" interface="false" size="36" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.SlideShowHandler" sourceFile="SlideShowHandler.java" interface="false" size="80" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.SpreadsheetHandler" sourceFile="SpreadsheetHandler.java" interface="false" size="66" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.StressMap" sourceFile="StressMap.java" interface="false" size="95" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.StressTestUtils" sourceFile="StressTestUtils.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.TestAllFiles" sourceFile="TestAllFiles.java" interface="false" size="111" bugs="2" priority_2="2"/>
+      <ClassStats class="org.apache.poi.stress.XDGFFileHandler" sourceFile="XDGFFileHandler.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.XSLFFileHandler" sourceFile="XSLFFileHandler.java" interface="false" size="38" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.XSSFBFileHandler" sourceFile="XSSFBFileHandler.java" interface="false" size="41" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.XSSFFileHandler" sourceFile="XSSFFileHandler.java" interface="false" size="107" bugs="0"/>
+      <ClassStats class="org.apache.poi.stress.XWPFFileHandler" sourceFile="XWPFFileHandler.java" interface="false" size="25" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="228" invocations="2131" avgMicrosecondsPerInvocation="107" maxMicrosecondsPerInvocation="8646" standardDeviationMicrosecondsPerInvocation="395"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="86" invocations="2139" avgMicrosecondsPerInvocation="40" maxMicrosecondsPerInvocation="10567" standardDeviationMicrosecondsPerInvocation="229"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="55" invocations="275" avgMicrosecondsPerInvocation="203" maxMicrosecondsPerInvocation="3481" standardDeviationMicrosecondsPerInvocation="385"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="53" invocations="275" avgMicrosecondsPerInvocation="194" maxMicrosecondsPerInvocation="3579" standardDeviationMicrosecondsPerInvocation="364"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="46" invocations="826" avgMicrosecondsPerInvocation="56" maxMicrosecondsPerInvocation="3969" standardDeviationMicrosecondsPerInvocation="152"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="25" invocations="405" avgMicrosecondsPerInvocation="62" maxMicrosecondsPerInvocation="1178" standardDeviationMicrosecondsPerInvocation="118"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="23" invocations="183" avgMicrosecondsPerInvocation="126" maxMicrosecondsPerInvocation="2315" standardDeviationMicrosecondsPerInvocation="225"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="22" invocations="179" avgMicrosecondsPerInvocation="126" maxMicrosecondsPerInvocation="1629" standardDeviationMicrosecondsPerInvocation="192"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="21" invocations="179" avgMicrosecondsPerInvocation="120" maxMicrosecondsPerInvocation="1322" standardDeviationMicrosecondsPerInvocation="160"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="20" invocations="275" avgMicrosecondsPerInvocation="76" maxMicrosecondsPerInvocation="1123" standardDeviationMicrosecondsPerInvocation="138"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="20" invocations="2084" avgMicrosecondsPerInvocation="9" maxMicrosecondsPerInvocation="320" standardDeviationMicrosecondsPerInvocation="19"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="19" invocations="179" avgMicrosecondsPerInvocation="108" maxMicrosecondsPerInvocation="1067" standardDeviationMicrosecondsPerInvocation="163"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="19" invocations="183" avgMicrosecondsPerInvocation="104" maxMicrosecondsPerInvocation="1860" standardDeviationMicrosecondsPerInvocation="190"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="15" invocations="275" avgMicrosecondsPerInvocation="57" maxMicrosecondsPerInvocation="950" standardDeviationMicrosecondsPerInvocation="111"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="14" invocations="162" avgMicrosecondsPerInvocation="89" maxMicrosecondsPerInvocation="1144" standardDeviationMicrosecondsPerInvocation="128"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="14" invocations="275" avgMicrosecondsPerInvocation="51" maxMicrosecondsPerInvocation="1534" standardDeviationMicrosecondsPerInvocation="115"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="13" invocations="179" avgMicrosecondsPerInvocation="74" maxMicrosecondsPerInvocation="994" standardDeviationMicrosecondsPerInvocation="97"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="11" invocations="275" avgMicrosecondsPerInvocation="41" maxMicrosecondsPerInvocation="816" standardDeviationMicrosecondsPerInvocation="87"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
