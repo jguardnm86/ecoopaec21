@@ -1,6 +1,6 @@
-PWD /Users/krishna/repos/ecoopaec21
+PWD /Users/krishna/repos/ecoopaec21_working
 INPUT /Users/krishna/Library/Application Support/MiKTeX/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt
-INPUT /Users/krishna/repos/ecoopaec21/misusessummary.tex
+INPUT /Users/krishna/repos/ecoopaec21_working/misusessummary.tex
 OUTPUT misusessummary.log
 INPUT /Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/article.cls
 INPUT /Library/Application Support/MiKTeX/texmfs/install/tex/latex/base/article.cls
