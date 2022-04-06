@@ -1,0 +1,3 @@
+JMH S 43 space.kiibou.aes.benchmark.AESMiscBenchmark S 97 space.kiibou.aes.benchmark.jmh_generated.AESMiscBenchmark_aes_creat_secret_key_and_cipher_jmhTest S 31 aes_creat_secret_key_and_cipher S 10 Throughput E A 1 1 1 E E E E E E E E E E E E E E E E E 
+JMH S 43 space.kiibou.aes.benchmark.AESMiscBenchmark S 83 space.kiibou.aes.benchmark.jmh_generated.AESMiscBenchmark_aes_create_cipher_jmhTest S 17 aes_create_cipher S 10 Throughput E A 1 1 1 E E E E E E E E E E E E E E E E E 
+JMH S 43 space.kiibou.aes.benchmark.AESMiscBenchmark S 87 space.kiibou.aes.benchmark.jmh_generated.AESMiscBenchmark_aes_create_secret_key_jmhTest S 21 aes_create_secret_key S 10 Throughput E A 1 1 1 E E E E E E E E E E E E E E E E E 
