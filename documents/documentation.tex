@@ -1,0 +1,190 @@
+\documentclass[parskip=full]{scrreprt}
+\title{jGuard: Programming misuse-resilient APIs}
+\subtitle{Artifacts for reproducibility}
+
+\usepackage{tabularx}   % Tabellen, die sich automatisch der Breite anpassen
+\usepackage{mathtools} % erweiterte Fassung von amsmath
+\usepackage{amssymb}   % erweiterter Zeichensatz
+\usepackage[binary-units]{siunitx}   % Einheiten
+\usepackage{listings}
+\usepackage{import}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{fancyvrb}
+\usepackage{multirow}
+\usepackage[nounderscore]{syntax} % Definitionen von Grammatiken
+\usepackage{hyperref}
+
+\usepackage{pgfplots}
+\usepackage{pgf-pie}
+\usepgfplotslibrary{statistics}
+
+\pgfplotsset{compat=1.17}
+
+\newcommand{\etal}{et al.\ }
+\newcommand{\eg}{e.g.}
+
+\newcommand{\syncDecl}[1]{<{\color{blue} \textbf{#1}}\label{gr:#1}>}
+\newcommand{\syncRef}[1]{\hyperref[gr:#1]{\synt{{\color{blue} \textbf{#1}}}}}
+\newcommand{\customSyncRef}[2]{\hyperref[gr:#1]{<\emph{\color{blue} \textbf{#2}}>}}
+\newcommand{\todo}[1]{{\color{red} \textbf{TODO: } #1}}
+
+\newcommand{\detectable}{\tikz[baseline=-0.5ex]\draw[green,fill=green,radius=3pt] (0,0) circle ;}%
+\newcommand{\partiallyDetectable}{\tikz[baseline=-0.5ex]\draw[orange,fill=orange,radius=3pt] (0,0) circle ;}%
+\newcommand{\notDetectable}{\tikz[baseline=-0.5ex]\draw[red,fill=red,radius=3pt] (0,0) circle ;}%
+
+\newcommand\YAMLcolonstyle{\color{red}}
+\newcommand\YAMLkeystyle{\color{black}}
+\newcommand\YAMLvaluestyle{\color{blue}}
+
+\lstset{
+tabsize = 2, %% set tab space width
+showstringspaces = false, %% prevent space marking in strings, string is defined as the text that is generally printed directly to the console
+numbers = none, %% don't display line numbers by default
+commentstyle = \color[HTML]{586e75}, %% set comment color
+keywordstyle = \color{blue}, %% set keyword color
+stringstyle = \color{red}, %% set string color
+rulecolor = \color{black}, %% set frame color to avoid being affected by text color
+basicstyle = \fontsize{7}{8} \ttfamily , %% set listing font and size
+breaklines = true, %% enable line breaking
+numberstyle = \tiny,
+}
+
+\lstdefinestyle{jguard}{
+  language=Java,
+  morekeywords={verified, require, initially, sets, instantiation, meta, when, returns, guard, reset, resets, state}
+}
+
+\lstdefinelanguage{CrySL}[]{Java}{
+  morekeywords={ABSTRACT, SPEC, OBJECTS, EVENTS, ORDER, CONSTRAINTS, REQUIRES, ENSURES, REFINES, define, add, constraint},
+  moredelim=[is][\textcolor{darkgray}]{\%\%}{\%\%},
+  moredelim=[il][\textcolor{darkgray}]{§§}
+}
+
+\makeatletter
+\usepackage[htt]{hyphenat}
+
+% here is a macro expanding to the name of the language
+% (handy if you decide to change it further down the road)
+\newcommand\language@yaml{yaml}
+
+\expandafter\expandafter\expandafter\lstdefinelanguage
+\expandafter{\language@yaml}
+{
+  keywords={true,false,null,y,n},
+  keywordstyle=\color{darkgray},
+  sensitive=false,
+  comment=[l]{\#},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\YAMLvaluestyle\ttfamily,
+  moredelim=[l][\color{orange}]{\&},
+  moredelim=[l][\color{magenta}]{*},
+  moredelim=**[il][\YAMLcolonstyle{:}\YAMLvaluestyle]{:},   % switch to value style at :
+  morestring=[b]',
+  morestring=[b]",
+  literate =    {---}{{\ProcessThreeDashes}}3
+                {>}{{\textcolor{red}\textgreater}}1     
+                {|}{{\textcolor{red}\textbar}}1 
+                {\ -\ }{{\ -\ }}3,
+}
+
+\begin{document}
+
+\maketitle
+\setcounter{chapter}{1}
+
+\section{Overview}
+
+Our artifact consists of the following resources:
+
+\begin{enumerate}
+ \item A video explaining how to use jGuard, \url{https://youtu.be/tnQGMyMjZRA}.
+ Please use this this video to test if jGuard works, it serves as a test for Kick-the-Tires.
+ \item A public, anonymous repository, \url{https://github.com/jguardnm86/ecoopaec21}.
+ This repository contains the MPS implementation for jGuard described in our paper.
+ It also contains annotated code for BouncyCastle and core JDK classes which serve as the
+ basis for our evaluation.
+ \item For convenience, a prepared virtual machine (OVA file) and pre-compiled versions of our verified BouncyCastle implementation are available under \url{https://zenodo.org/record/5767812#.YbDYZ1Mo9MQ}.
+\end{enumerate}
+
+\section{Setup}
+
+The video linked in the previous section explains how to setup jGuard. This section gives
+an alternative textual description.
+While our implementation is available as a VM, we recommend checking out jGuard from source if
+possible.
+
+\subsection{From sources}
+
+Compiling jGuard requires version 2021.2 of JetBrains MPS\footnote{Available for download under \url{https://www.jetbrains.com/mps/download/previous.html}}, no additional dependencies are needed.
+Clone our repository (\url{https://github.com/jguardnm86/ecoopaec21}) and load this
+directory as an MPS project.
+In MPS, first build the \texttt{apiSL} language implementing jGuard as described in our paper.
+For this step, model checker warnings in MPS if any occur.
+Next, build the \texttt{apiSL.runtime} model. At this point, all jGuard features are ready to be used in that MPS instance.
+
+\subsection{Via the prebuilt VM}
+
+We have prepared a \href{https://zenodo.org/record/5767812/files/jGuard_fixed.ova?download=1}{virtual machine} with MPS and jGuard installed.
+To review jGuard this way, download the linked OVA file and import it into a suitable virtualization software (we were using VirtualBox version 6.1).
+
+Launch in the VM. You should be taken to the desktop directly. If needed, login with the user and password \texttt{jguard}. Launch MPS from the side bar to open 
+
+\section{Reproducing our evaluation}
+
+After launching MPS with our implementation (and building the language if not using the prepared VM), the \texttt{sandbox} and \texttt{BouncyCastle} modules can be used to
+reproduce our evaluation resultse for RQ1-a and RQ1-b, respectively.
+
+\subsection{RQ1-a (Expressing guards against frequent misuses)}
+
+The \texttt{documents/misusessummary.pdf} file in the linked GitHub repository gives an
+overview of the most frequently occuring misuses in the MUBench dataset.
+Further, it describes how we designed jGuard checks against these misuses.
+
+As it is not possible to reliably replace core JDK classes on an unmodified VM, we rely
+on custom tests in the \texttt{test} package in the \texttt{apiSL.sandbox} solution.
+These tests construct instances of our verified classes and trigger a misuse and can be
+run independently.
+The verified classes will throw an exception when this misuse occurs.
+
+\subsection{RQ1-b (Expressing guards against crypto misuses)}
+
+You can use the \texttt{BouncyCastle} model in the MPS project to compile a verified implementation of the BouncyCastle JCA implementation.
+
+We have used an incremental approach to verify BouncyCastle and only converted the classes
+needing modifications to express guards against misuses.
+To create a usable \texttt{jar} file from these files, replace the affected classes from an
+unmodified BouncyCastle build. For your convenience, we have prepared \href{https://zenodo.org/record/5767812/files/verified_bc.jar?download=1}{a BouncyCastle jar with our changes} which can be used to run benchmarks or verify misuses.
+
+For running CogniCrypt as a static analysis tool, we refer to the documentation of \href{https://github.com/CROSSINGTUD/CryptoAnalysis}{CogniCrypt\textsubscript{SAST}}.
+As a data source, we used cryptographic misuses in \href{https://github.com/stg-tud/MUBench}{MUBench}. We identified cryptographic misuses as those using at least one class in
+the \texttt{javax.crypto} package.
+A detailed overview of relevant misuses and the guards we have designed against them is also given in the second section of the \texttt{documents/misusessummary.pdf} file in our repository.
+
+To demonstrate how the \texttt{verified\_bc.jar} can be used, consider the \texttt{SimpleCryptoMisuse.java} file at the root of the linked repository.
+This simple program misuses a JCA API, which can be verified as follows:
+
+\begin{enumerate}
+ \item Run \texttt{javac -cp benchmarks/poi-benchmark/bclibs/original\_bc.jar  SimpleCryptoMisuse.java} to compile the application.
+ \item Run it against the original BouncyCastle implementation: \texttt{java -cp benchmarks/poi-benchmark/bclibs/original\_bc.jar:. SimpleCryptoMisuse}. No misuse is reported.
+ \item Run it against the verified BouncyCastle implementation: \texttt{java -cp benchmarks/poi-benchmark/bclibs/verified\_bc.jar:. SimpleCryptoMisuse}, the misuse is reported.
+\end{enumerate}
+
+Similar to this synthetic example, cryptographic misuses reported in MUBench can be reproduced by downloading the source mentioned in MUBench and running it against the verified BouncyCastle implementation.
+
+\subsection{RQ2 (Benchmarks)}
+
+Relevant sources for our benchmarks are available in the \texttt{benchmarks} directory of our repository.
+You can run our benchmarks as follows:
+
+\begin{enumerate}
+ \item Run \texttt{./gradlew jmh} in \texttt{benchmarks/bouncycastle-benchmark}.
+ \item Run \texttt{./gradlew jmh} in \texttt{benchmarks/poi-benchmark}.
+ \item Run \texttt{./gradlew jmh-benchmarks:jmh} in \texttt{benchmarks/java-jwt-bk}.
+\end{enumerate}
+
+Benchmark results are written into \texttt{build/results/jmh} in the folder the Gradle command was run in.
+
+\end{document}
+ 

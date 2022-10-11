@@ -4,6 +4,7 @@ There will be errors but this can be ignored. Click on apiSL language (with an L
 You should also build the apiSL.runtime solution (with an S icon). 
 You can build both of them together if you like by group selecting them (CMD + click) on a Mac. Once you are done with these steps, you can use jGuard as indicated in the video. 
     
-Instructions on how to express misues in RQ1-a and RQ1-b are available in misusessummary.pdf
+Instructions on how to express misues in RQ1-a and RQ1-b are available in `documents/misusessummary.pdf`
+Detailed instructions on how to setup the repository and reproduce our evaluation are in `documents/documentation.pdf`.
 
 The answers to RQ2 are in the benchmarks folder
