@@ -7,4 +7,4 @@ You can build both of them together if you like by group selecting them (CMD + c
 Instructions on how to express misues in RQ1-a and RQ1-b are available in `documents/misusessummary.pdf`
 Detailed instructions on how to setup the repository and reproduce our evaluation are in `documents/documentation.pdf`.
 
-The answers to RQ2 are in the benchmarks folder
+The answers to RQ2 are in the benchmarks folder and available under https://we.tl/t-9rSNP1Io3f.

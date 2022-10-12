@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.14)  11 OCT 2022 19:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.5.14)  12 OCT 2022 11:09
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1127,25 +1127,25 @@ LaTeX Warning: No \author given.
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-Overfull \hbox (7.97408pt too wide) in paragraph at lines 169--170
+Overfull \hbox (7.97408pt too wide) in paragraph at lines 171--172
 []\OT1/cmr/m/n/10.95 Run \OT1/cmtt/l/it/10.95 javac -cp benchmarks/poi-benchmar
 k/bclibs/original[]-bc.jar Sim-ple-
  []
 
 
-Overfull \hbox (22.20715pt too wide) in paragraph at lines 170--171
+Overfull \hbox (22.20715pt too wide) in paragraph at lines 172--173
 []\OT1/cmr/m/n/10.95 Run it against the orig-i-nal Boun-cy-Cas-tle im-ple-men-t
 a-tion: \OT1/cmtt/l/it/10.95 java -cp benchmarks/poi-
  []
 
 
-Overfull \hbox (20.99048pt too wide) in paragraph at lines 171--172
+Overfull \hbox (20.99048pt too wide) in paragraph at lines 173--174
 []\OT1/cmr/m/n/10.95 Run it against the ver-i-fied Boun-cy-Cas-tle im-ple-men-t
 a-tion: \OT1/cmtt/l/it/10.95 java -cp benchmarks/poi-
  []
 
 
-Overfull \hbox (2.22606pt too wide) in paragraph at lines 171--172
+Overfull \hbox (2.22606pt too wide) in paragraph at lines 173--174
 \OT1/cmtt/l/it/10.95 benchmark/bclibs/verified[]-bc.jar:. Sim-ple-Cryp-toMis-us
 e\OT1/cmr/m/n/10.95 , the mis-use is re-
  []
@@ -1158,8 +1158,8 @@ Package rerunfilecheck Info: File `documentation.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 39947 strings out of 478238
- 947459 string characters out of 5850456
+ 39945 strings out of 478238
+ 947447 string characters out of 5850456
  1426741 words of memory out of 5000000
  57583 multiletter control sequences out of 15000+600000
  481019 words of font info for 76 fonts, out of 8000000 for 9000
@@ -1172,10 +1172,10 @@ sfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.p
 fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/sha
 re/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on documentation.pdf (4 pages, 112586 bytes).
+Output written on documentation.pdf (4 pages, 113254 bytes).
 PDF statistics:
  127 PDF objects out of 1000 (max. 8388607)
  103 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
+ 21 named destinations out of 1000 (max. 500000)
  77 words of extra memory for PDF output out of 10000 (max. 10000000)
 
