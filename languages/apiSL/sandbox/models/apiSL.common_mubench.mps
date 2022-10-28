@@ -263,7 +263,7 @@
         </node>
       </node>
       <node concept="2AHcQZ" id="2T5mmTX$EEw" role="2AJF6D">
-        <ref role="2AI5Lk" to="wyt6:~Override" />
+        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
       </node>
     </node>
     <node concept="2AN5GS" id="2T5mmTXETiP" role="jymVt">
@@ -791,7 +791,7 @@
       <node concept="3uibUv" id="2T5mmTXFpQ4" role="3clF45">
         <ref role="3uigEE" to="33ny:~Set" resolve="Set" />
         <node concept="3uibUv" id="2T5mmTXFpQ5" role="11_B2D">
-          <ref role="3uigEE" to="33ny:~Map$Entry" resolve="Entry" />
+          <ref role="3uigEE" to="33ny:~Map$Entry" resolve="Map.Entry" />
           <node concept="16syzq" id="2T5mmTXFpQe" role="11_B2D">
             <ref role="16sUi3" node="2T5mmTXFmKy" resolve="K" />
           </node>
@@ -813,7 +813,7 @@
         </node>
       </node>
       <node concept="2AHcQZ" id="2T5mmTXFpQh" role="2AJF6D">
-        <ref role="2AI5Lk" to="wyt6:~Override" />
+        <ref role="2AI5Lk" to="wyt6:~Override" resolve="Override" />
       </node>
     </node>
     <node concept="2tJIrI" id="2T5mmTXF$tx" role="jymVt" />

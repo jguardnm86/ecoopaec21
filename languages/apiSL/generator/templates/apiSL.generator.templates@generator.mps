@@ -3726,11 +3726,11 @@
         <property role="3TUv4t" value="true" />
         <node concept="3Tm6S6" id="622NOWShhxR" role="1B3o_S" />
         <node concept="3uibUv" id="622NOWShlwO" role="1tU5fm">
-          <ref role="3uigEE" node="622NOWShkkt" resolve="_StateChecker" />
+          <ref role="3uigEE" node="622NOWShkkt" resolve="reduce_VerifiedClass._StateChecker" />
         </node>
         <node concept="2ShNRf" id="622NOWShhxT" role="33vP2m">
           <node concept="HV5vD" id="622NOWShhxU" role="2ShVmc">
-            <ref role="HV5vE" node="622NOWShkkt" resolve="_StateChecker" />
+            <ref role="HV5vE" node="622NOWShkkt" resolve="reduce_VerifiedClass._StateChecker" />
           </node>
         </node>
         <node concept="17Uvod" id="622NOWShhxV" role="lGtFl">
